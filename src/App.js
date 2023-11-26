@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import { VideoCard } from "./Components/VideoCard";
 import { About } from "./Screens/Dashboard/About";
 import { Button } from "@mui/material";
+import Dashboard from "./Screens/Dashboard";
 
 const listData = [
   "https://carousel-slider.uiinitiative.com/images/thor-ragnarok.jpg",
@@ -37,22 +38,7 @@ function App() {
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
-      <div
-        style={{
-          backgroundColor: "lightblue",
-          width: "100%",
-          height: "400px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: 'end',
-          paddingBottom: '5%'
-        }}
-      >
-        <Button variant="contained" sx={{ textAlign: "center" }}>
-          WATCH MORE
-        </Button>
-      </div>
-      <About />
+     <Dashboard />
     </div>
   );
   return (
