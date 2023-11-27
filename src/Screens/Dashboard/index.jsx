@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 
 import { About } from "./About";
-import Header from '../../Components/Header';
-import PartnerProducts from '../../Components/PartnerProducts';
-import FAQ from '../../Components/faq';
+import Header from '../../components/Header';
+import PartnerProducts from '../../components/PartnerProducts';
+import FAQ from "../../components/faq";
 import { LocalImages } from "../../Utils/images";
 import { Strings } from "../../Utils/strings";
 
