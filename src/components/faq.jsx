@@ -1,13 +1,11 @@
 import React from 'react';
-import LeavesWings from "./../assets/leaves_wings.png"
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import { styled } from '@mui/material/styles';
 import { Typography, Box, Container } from '@mui/material';
-
-
+import { LocalImages } from '../Utils/images';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -59,7 +57,7 @@ const FAQ = () => {
       <Typography variant="h4" gutterBottom className='font-gloucester' sx={{p:0, m:0}}>
       Frequently Asked Questions
       </Typography>
-      <Box><img src={LeavesWings} alt="" width={80} /></Box>
+      <Box><img src={LocalImages.leavesWings} alt="" width={80} /></Box>
       <Box sx={{ alignSelf: "center", textAlign: "center", py: 5, width: "100%", justifyContent: "center", alignItems: "center", height: "100%", background: "red",}}>
        <Container width="100%">
         <div style={{width: 300, background: "green"}}>test</div>

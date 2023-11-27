@@ -16,7 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Stack from '@mui/material/Stack';
 import PersonIcon from '@mui/icons-material/Person';
-import { LocalImage } from '../Utils/images';
+import { LocalImages } from '../Utils/images';
 
 const pages = ['LIVE SCHEDULE', 'IWC MERCH', 'IWC SOCIAL', 'ABOUT', 'EVENTS', 'CONTACT'];
 
@@ -72,7 +72,7 @@ function Header() {
           >
             LOGO
           </Typography> */}
-          <Box sx={{flexGrow: 1, textAlign:  { xs: 'center', md: 'left' } }}><img style={{width: "150px", position: "absolute", top: -10}} src={LocalImage.logo} alt="Logo" /></Box>
+          <Box sx={{flexGrow: 1, textAlign:  { xs: 'center', md: 'left' } }}><img style={{width: "150px", position: "absolute", top: -10}} src={LocalImages.logo} alt="Logo" /></Box>
           <Box sx={{ flexGrow: 0 }}>
             <Box sx={{display:"flex"}}>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

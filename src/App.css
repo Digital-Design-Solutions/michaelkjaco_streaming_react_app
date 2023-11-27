@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: gloucester;
-  src: url(./assets/fonts/gloucester-mt-extra-condensed-regular.TTF);
+  src: url(./Assets/Fonts/gloucester-mt-extra-condensed-regular.TTF);
 }
 
 @font-face {
   font-family: NotoSans;
-  src: url(./assets/fonts/NotoSans-Medium.ttf);
+  src: url(./Assets/Fonts/NotoSans-Medium.ttf);
 }
 .font-gloucester {
   font-family: gloucester!important;
@@ -35,13 +35,13 @@ h3 {
   text-align: center;
 }
 .header-bg {
-  background: url(./assets/home_bg.png) no-repeat;
+  background: url(./Assets/Images/home_bg.png) no-repeat;
   background-size: cover;
   background-position: center top;
   height: 600px;
 }
 .faq-bg {
-  background: url(./assets/faq_bg.png) no-repeat;
+  background: url(./Assets/Images/faq_bg.png) no-repeat;
   background-size: cover;
   background-position: center -5px;
   height: 600px;
