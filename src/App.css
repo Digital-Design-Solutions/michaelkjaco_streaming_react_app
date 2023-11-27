@@ -1,38 +1,66 @@
-.App {
+* {
+  font-family: NotoSans;
+}
+
+@font-face {
+  font-family: gloucester;
+  src: url(./assets/fonts/gloucester-mt-extra-condensed-regular.TTF);
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url(./assets/fonts/NotoSans-Medium.ttf);
+}
+.font-gloucester {
+  font-family: gloucester!important;
+}
+.font-notoSans {
+  font-family: NotoSans;
+}
+  .color-gray {
+  color:gray
+}
+.header-content {
+  background-color: #fff!important;
+  color: #333!important;
+}
+li.header-left-menu, .MuiButtonBase-root {
+  color: #333!important;
+}
+li.header-left-menu, .MuiButtonBase-root:hover {
+  color: #FFA903!important;
+}
+h3 { 
+  font-family: gloucester;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-bg {
+  background: url(./assets/home_bg.png) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 600px;
+}
+.faq-bg {
+  background: url(./assets/faq_bg.png) no-repeat;
+  background-size: cover;
+  background-position: center -5px;
+  height: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+  /* Media Queries */
+  @media screen and (max-width: 995px) {
+    .header-bg {    
+      height: 400px;
+    }
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media screen and (max-width: 1170px) {
+   
   }
-  to {
-    transform: rotate(360deg);
+  @media screen and (max-width: 800px) {
+    .header-bg {
+      height: 400px;
+    }
   }
-}
