@@ -1,29 +1,25 @@
 import React from "react";
-import { About } from "./About";
 import { Box, Button, Typography } from "@mui/material";
+
+import { About } from "./About";
+import Header from '../../Components/Header';
+import PartnerProducts from '../../Components/PartnerProducts';
+import FAQ from '../../Components/faq';
 import { LocalImages } from "../../Utils/images";
 import { Strings } from "../../Utils/strings";
-
-const ovalStyles = {
-  width: "100%",
-  height: "100%",
-  backgroundColor: "#2196F3", // Your desired background color
-  borderRadius: "50%",
-};
 
 function Dashboard() {
   return (
     <>
-      <img
-        src={LocalImages.mountain}
-        style={{ width: "100%", height: "90vh", objectFit: "cover" }}
-      />
+      <Header />
+      <Box sx={{width: "100%"}} className="header-bg" />
+     
       <Box display="flex" height="100vh" width={"100vw"}>
         <Box
           sx={{
             width: "120vw",
             marginLeft: "-10%",
-            marginTop: "-14%",
+            marginTop: "-13%",
             height: "100vh",
             backgroundColor: "#fff",
             borderTopLeftRadius: "50%",
@@ -67,6 +63,10 @@ function Dashboard() {
         </Button>
       </div>
       <About />
+
+      <PartnerProducts />
+      <FAQ />
+      
     </>
   );
 }
