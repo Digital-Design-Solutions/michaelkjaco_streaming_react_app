@@ -62,7 +62,7 @@ const FAQ = () => {
         <Box className="faq-content">
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className="faq-content-accordion">
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-            <Typography>Collapsible Group Item #1</Typography>
+            <Typography>When does Michael Jaco go Live?</Typography>
           </AccordionSummary>
           <AccordionDetails sx={{mb:2}}>
             <Typography>
@@ -75,7 +75,7 @@ const FAQ = () => {
         </Accordion>
         <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className="faq-content-accordion">
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-            <Typography>Collapsible Group Item #2</Typography>
+            <Typography>What are the different subscription plans available?</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -88,7 +88,33 @@ const FAQ = () => {
         </Accordion>
         <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className="faq-content-accordion">
           <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-            <Typography>Collapsible Group Item #3</Typography>
+            <Typography>How do I cancel my subscription service?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+              sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} className="faq-content-accordion">
+          <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+            <Typography>What are the different subscription plans available?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+              sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')} className="faq-content-accordion">
+          <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+            <Typography>Are there any discounts or promotions available for subsriptions?</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>

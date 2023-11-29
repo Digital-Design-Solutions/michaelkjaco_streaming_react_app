@@ -8,12 +8,14 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { CheckBox } from "@mui/icons-material";
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import "./Login.css";
-import CustomInput from "../../Components/Form/CustomInput";
+import CustomInput from "../../components/Form/CustomInput";
 import { isValidString } from "../../Utils/validators";
 import { LocalImages } from "../../Utils/images";
 
@@ -40,7 +42,7 @@ const Login = () => {
   };
 
   const formContent = () => (
-    <form onSubmit={doLogin} style={{ minWidth: "90%" }}>
+    <form onSubmit={doLogin} style={{ minWidth: "100%" }}>
       <CustomInput
         value={loginForm.values.email}
         onChangeText={(value) => loginForm.setFieldValue("email", value)}
@@ -59,6 +61,7 @@ const Login = () => {
             style={{ width: "60%", height: "auto" }}
           />
         }
+        style={{background: "red"}}
       />
 
       <CustomInput
@@ -87,35 +90,32 @@ const Login = () => {
         )}
       />
 
-      <Grid style={{ paddingTop: "4px" }}>
-        <Grid xs="12" sm="6" md="6" lg="6" xl="6">
-          <CheckBox>Keep me signed in</CheckBox>
+      {/* <Grid style={{ paddingTop: "4px" }}>
+        <Grid xs="12" sm="8" md="8" lg="8" xl="8">
+          <Checkbox>Keep me signed in</Checkbox>
         </Grid>
-        <Grid
-          xs="12"
-          sm="6"
-          md="6"
-          lg="6"
-          xl="6"
-          style={{ textAlign: "right", color: "#1A315C" }}
-        >
+        <Grid style={{ textAlign: "right", color: "#1A315C" }}>
           <Typography variant="body1" component={"body"}>
             Forgot Password?
           </Typography>
         </Grid>
+        
+      </Grid> */}
+     
+      <Grid container >
+          <Grid item xs={6} className="login-content-style01">
+             {/* <Typography><CheckBox /> <span style={{position: "relative", top: -10, left: -2}}>Keep me signed in</span></Typography> */}
+             <FormGroup><FormControlLabel control={<Checkbox />} label="Keep me signed in" /></FormGroup>
+          </Grid>
+          <Grid item xs={6} sx={{ textAlign: "right", paddingTop: 1, fontSize: 11}}>
+          <Typography variant="body1" component={"body"} className="login-forgot-pass">
+            Forgot Password?
+          </Typography>
+          </Grid>
       </Grid>
-
       <button
         type="submit"
-        style={{
-          marginTop: "24px",
-          background: "#1A315C  0% 0% no-repeat padding-box",
-          color: "#fff",
-          textAlign: "center",
-          width: "100%",
-          padding: "12px",
-          textTransform: "uppercase",
-        }}
+        className="login-btn-submit"
         disabled={!loginForm.isValid}
       >
         Submit
@@ -133,13 +133,13 @@ const Login = () => {
           style={{
             width: "15%",
             height: "2%",
-            border: "1px solid #ccc",
+            border: "1px solid #adb2bd",
           }}
         />
         <Typography
           variant="body1"
           component={"body"}
-          style={{ margin: "0px 8px" }}
+          style={{ margin: "0px 8px", color: "#adb2bd" }}
         >
           OR
         </Typography>
@@ -147,23 +147,14 @@ const Login = () => {
           style={{
             width: "15%",
             height: "2%",
-            border: "1px solid #ccc",
+            border: "1px solid #adb2bd",
           }}
         />
       </Grid>
 
       <button
         type="submit"
-        style={{
-          marginTop: "16px",
-          background: "#fff  0% 0% no-repeat padding-box",
-          color: "#1A315C",
-          textAlign: "center",
-          width: "100%",
-          padding: "12px",
-          border: "1px solid #1A315C",
-          textTransform: "uppercase",
-        }}
+        className="login-btn-submit login-btn-create-ac"
       >
         Create account
       </button>
@@ -171,7 +162,7 @@ const Login = () => {
   );
 
   return (
-    <Box maxWidth={true} style={{ height: "100vh", overflow: "hidden" }}>
+    <Box maxWidth={true} style={{ height: "100vh", /*overflow: "hidden"*/ }}>
       <Card
         style={{
           padding: "4vh",
@@ -181,31 +172,27 @@ const Login = () => {
       >
         <img
           src={LocalImages.logo}
-          style={{ width: "180px", position: "absolute", top: "0px" }}
+          style={{ width: "180px", position: "absolute", top: "-20px" }}
         />
       </Card>
       <Grid
         style={{
-          height: "100%",
+          // height: "100%",
           background: `url(${LocalImages.bgURL}) 0 0/100% 100% no-repeat`,
-          overflow: "scroll",
+          backgroundPosition: "center bottom",
+          backgroundSize: "cover",
+          // overflow: "scroll",
           alignItems: "center",
           justifyContent: "center",
         }}
         container
       >
-        <Grid xs="10" sm="6" md="10" lg="4" xl="4">
-          <Card style={{ padding: "48px" }}>
+        <Grid xs="10" sm="6" md="10" lg="4" xl="4" sx={{mt:15}}>
+          <Card className="login-card">
             <Typography
-              style={{
-                justifyContent: "center",
-                textAlign: "center",
-                fontWeight: "700",
-                color: "#464A53",
-              }}
-              variant="h4"
-              component={"h4"}
-            >
+              variant="h3"
+              component={"h3"}
+              className="font-gloucester title-style01">
               Sign In to Your Account
             </Typography>
             <CardContent
@@ -231,8 +218,23 @@ const Login = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
+        </Grid>  
+
+        <Box style={{
+          height: "100px",
+          width:"100%",
+          backgroundImage: `url( ${LocalImages.loginBottomBg} )`,
+          backgroundSize: "cover",
+          backgroundPosition: "cetner bottom",
+          position: "relative",
+          top: -80,
+        }}>
+        <p></p>
+      </Box>        
       </Grid>
+      
+      
+
     </Box>
   );
 };

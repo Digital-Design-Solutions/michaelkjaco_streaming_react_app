@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 import { Strings } from "../../Utils/strings";
 import { LocalImages } from "../../Utils/images";
@@ -22,18 +22,19 @@ export const About = () => {
               alignItems: "center",
             }}
           >
-            <Typography component={"h1"} variant="h4" fontSize={"30px"}>
+            <Typography component={"h1"} variant="h4" fontSize={"30px"} sx={{pt: 3}} className="font-gloucester">
               {Strings.aboutIntuitiveWarriorChannel}
             </Typography>
             <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
           </div>
-
+        <Box sx={{mr: 8}}>
           <Typography
             component={"body"}
             variant="body1"
             lineHeight={"28px"}
             marginTop={"24px"}
             fontSize={"16px"}
+            className="font-notoSans"
           >
             {txt1}
           </Typography>
@@ -43,15 +44,17 @@ export const About = () => {
             lineHeight={"28px"}
             marginTop={"32px"}
             fontSize={"16px"}
+            className="font-notoSans"
           >
             {txt2}
           </Typography>
+          </Box>
         </Grid>
         <Grid item xs={6} sx={{ marginTop: "-120px" }}>
           <img
             src={LocalImages.michaelJaco}
             style={{
-              width: "115%",
+              width: "95%",
               height: "100%",
               objectFit: "cover",
               // position: "absolute",

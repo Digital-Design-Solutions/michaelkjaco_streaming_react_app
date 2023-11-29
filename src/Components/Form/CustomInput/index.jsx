@@ -22,7 +22,7 @@ const CustomInput = ({
       <Typography
         component={"body"}
         variant="subtitle1"
-        style={{ color: getInputFocus ? "#3880ff" : isError ? "red" : "gray" }}
+        style={{ color: getInputFocus ? "#464A5" : isError ? "red" : "#464A53", fontSize: "14px" }}
       >
         {label}
         {isRequired ? "*" : ""}

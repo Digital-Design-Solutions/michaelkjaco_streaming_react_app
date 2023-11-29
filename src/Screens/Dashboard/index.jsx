@@ -37,10 +37,10 @@ function Dashboard() {
               alignItems: "center",
             }}
           >
-            <Typography component={"h4"} variant="h4">
+            <Typography component={"h4"} variant="h4" className="font-gloucester">
               {Strings.watchOurLatestShows}
             </Typography>
-            <Typography component={"body"} variant="subtitle1">
+            <Typography component={"body"} variant="subtitle1" className="font-notoSans color-gray">
               {Strings.startSavingYourTimerWithFramerWireframeWebuiKit}
             </Typography>
             <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
