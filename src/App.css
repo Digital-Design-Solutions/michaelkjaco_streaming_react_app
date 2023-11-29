@@ -20,6 +20,70 @@
   .color-gray {
   color:gray
 }
+
+/* Login */
+.login-card {
+  padding: 10%;
+  border-radius: 12px!important;
+}
+.title-style01 {
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+    color: #464A53;
+    padding: 0px 0 10px 0!important;
+    margin: 0px 0 0px 0!important;
+}
+.label-style01 {
+  width: 60%;
+  height: auto;
+  color: #464A53;
+  font-size: 11px;;
+}
+
+::placeholder {
+  color: #adb2bd;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: #adb2bd;
+}
+.login-content-style01 span {
+  font-size: 12px!important;
+  color: #adb2bd;
+}
+.login-forgot-pass {
+  font-size: 13px!important;
+  color: #1A315C;
+  padding-top: 5px;
+  font-weight: 500!important;
+}
+.login-content-style01 svg {
+  position: relative;
+  right: -6px;
+  top: -1px;
+}
+.login-btn-submit {
+  margin-top: 24px;
+  background: #1A315C  0% 0% no-repeat padding-box;
+  color: #eae3e3;
+  text-align: center;
+  width: 100%;
+  padding: 10px 12px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  font-family: NotoSans;
+  font-weight: normal;
+  font-size: 18px; 
+}
+.login-btn-create-ac {
+  background: #fff 0% 0% no-repeat padding-box;
+  color: #1A315C;
+  margin: 0 0 20px 0;
+}
+
+
 .header-content {
   background-color: #fff!important;
   color: #333!important;
@@ -43,17 +107,32 @@ h3 {
 .faq-bg {
   background: url(./Assets/Images/faq_bg.png) no-repeat;
   background-size: cover;
-  background-position: center -5px;
-  height: 600px;
+  background-position: left -55px;
+  padding: 10% 0;
 }
-
-
+.faq-content-accordion {
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.3)!important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: NotoSans!important;
+}
+.faq-content-accordion p {
+font-family: NotoSans!important;
+text-align: left;
+}
+.faq-content .faq-content-accordion:not(:last-child) { border-bottom: 1!important;}
+.faq-content { padding: 5% 25%;}
 
   /* Media Queries */
   @media screen and (max-width: 995px) {
     .header-bg {    
       height: 400px;
     }
+    .faq-content {
+      padding: 5% 10%;
+    }
+    
   }
 
   @media screen and (max-width: 1170px) {
@@ -62,5 +141,11 @@ h3 {
   @media screen and (max-width: 800px) {
     .header-bg {
       height: 400px;
+    }
+    .faq-content {
+      padding: 5% 10%;
+    }
+    .login-card {
+      padding: 5%;
     }
   }

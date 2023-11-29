@@ -9,6 +9,12 @@ import C60EVO from "../Assets/Images/c60_evo.png";
 import C60EVO1 from "../Assets/Images/c60_evo_1.png";
 import C60EVO2 from "../Assets/Images/c60_evo_2.png";
 import C60EVO3 from "../Assets/Images/c60_evo_3.png";
+// import BgURL from "../Assets/Images/himalayas.avif";
+import BgURL from "../Assets/Images/bgs/login-bg-main.png";
+import EyeClose from "../Assets/Images/eyeclose.png";
+import Lock from "../Assets/Images/lock.png";
+import User from "../Assets/Images/user.png";
+import loginBotMountain from "./../Assets/Images/bgs/login-bg-bottom.png";
 
 export const LocalImages = {
   leaveWings: LeaveWings,
@@ -22,4 +28,9 @@ export const LocalImages = {
   c60EVO1: C60EVO1,
   c60EVO2: C60EVO2,
   c60EVO3: C60EVO3,
+  bgURL: BgURL,
+  eyeClose: EyeClose,
+  lock: Lock,
+  user: User,
+  loginBottomBg:loginBotMountain,
 };

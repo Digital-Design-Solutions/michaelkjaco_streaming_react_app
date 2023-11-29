@@ -36,7 +36,7 @@ const PartnerProducts = () => {
        <Typography variant="h4" gutterBottom className='font-gloucester' sx={{p:0, m:0}}>
        Shop MJ❜s Partners and Save
       </Typography>
-      <Typography variant="subtitle2" className='color-gray' sx={{p:0, m:0, pb:2, lineHeight:1, fontWeight: "normal", fontSize: 12}}>Home is behind, the world ahead and there are many paths <br />
+      <Typography variant="subtitle1" className='color-gray' sx={{p:0, m:0, pb:2, lineHeight:1, fontWeight: "normal"}}>Home is behind, the world ahead and there are many paths <br />
         to tread through shadows to the e"dge.</Typography>
         <Box><img src={LocalImages.leaveWings} alt="" width={80} /></Box>
       <Container sx={{textAlign: "center", py: 3}}>

@@ -13,6 +13,7 @@ import "./App.css";
 // import { useEffect, useState } from "react";
 // import { VideoCard } from "./Components/VideoCard";
 import Dashboard from "./Screens/Dashboard";
+import Login from "./Screens/Login";
 
 // const listData = [
 //   "https://carousel-slider.uiinitiative.com/images/thor-ragnarok.jpg",
@@ -27,7 +28,8 @@ import Dashboard from "./Screens/Dashboard";
 function App() {
   return (
     <div>
-      <Dashboard />
+      {/* <Dashboard /> */}
+      <Login />
     </div>
   );
   // return (
