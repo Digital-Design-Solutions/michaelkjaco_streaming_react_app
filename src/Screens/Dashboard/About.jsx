@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Container } from "@mui/material";
 
 import { Strings } from "../../Utils/strings";
 import { LocalImages } from "../../Utils/images";
@@ -12,7 +12,8 @@ const txt2 =
 
 export const About = () => {
   return (
-    <div style={{}}>
+    <>
+    <div style={{}} className="about-content">
       <Grid container spacing={2}>
         <Grid item xs={5} marginLeft={"6%"}>
           <div
@@ -60,11 +61,31 @@ export const About = () => {
               // position: "absolute",
               top: 0,
               left: 0,
-              transform: "translateX(5%)",
+              // alignContent: "end",
+              overflow: "hidden",
+              transform: "translateX(20%)",
             }}
+            alt=""
           />
         </Grid>
       </Grid>
     </div>
+    <Box className="live-streaming-content">
+      <Container className="live-streaming-left">
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+      
+      </Container>
+    </Box>
+    </>
   );
 };

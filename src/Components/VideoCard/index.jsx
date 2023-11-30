@@ -3,7 +3,9 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
 export const VideoCard = ({ timeStamp, title, description, imageUrl }) => {
   return (
-    <div style={{ width: "500px", backgroundColor: 'green' }}>
+    <div 
+    // style={{ width: "400px" }}
+    >
       <img src={imageUrl} alt="" style={{width: '100%'}} />
       <div
         style={{
@@ -29,7 +31,6 @@ export const VideoCard = ({ timeStamp, title, description, imageUrl }) => {
           alignItems: 'center',
           width: '100%',
           justifyContent: 'space-between',
-          backgroundColor: 'red'
         }}
       >
         <div style={{ padding: "8px" }}>

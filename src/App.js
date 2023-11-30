@@ -28,8 +28,8 @@ import Login from "./Screens/Login";
 function App() {
   return (
     <div>
-      {/* <Dashboard /> */}
-      <Login />
+      <Dashboard />
+      {/* <Login /> */}
     </div>
   );
   // return (
