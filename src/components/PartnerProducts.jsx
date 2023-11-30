@@ -32,7 +32,7 @@ const listData = [
 
 const PartnerProducts = () => {
   return (
-    <Box sx={{textAlign: "center", py: 5}}>
+    <Box sx={{textAlign: "center", pt:8}}>
        <Typography variant="h4" gutterBottom className='font-gloucester' sx={{p:0, m:0}}>
        Shop MJ❜s Partners and Save
       </Typography>

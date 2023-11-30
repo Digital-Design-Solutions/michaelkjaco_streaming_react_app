@@ -15,6 +15,7 @@ import EyeClose from "../Assets/Images/eyeclose.png";
 import Lock from "../Assets/Images/lock.png";
 import User from "../Assets/Images/user.png";
 import loginBotMountain from "./../Assets/Images/bgs/login-bg-bottom.png";
+import YellowBg from "../Assets/Images/bgs/yellow-bg.png";
 
 export const LocalImages = {
   leaveWings: LeaveWings,
@@ -33,4 +34,5 @@ export const LocalImages = {
   lock: Lock,
   user: User,
   loginBottomBg:loginBotMountain,
+  yellowBg: YellowBg,
 };
