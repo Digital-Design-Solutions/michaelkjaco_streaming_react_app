@@ -15,7 +15,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import "./Login.css";
-import CustomInput from "../../components/Form/CustomInput";
+import CustomInput from "../../Components/Form/CustomInput";
 import { isValidString } from "../../Utils/validators";
 import { LocalImages } from "../../Utils/images";
 
