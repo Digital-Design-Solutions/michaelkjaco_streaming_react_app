@@ -17,6 +17,13 @@ import User from "../Assets/Images/user.png";
 import loginBotMountain from "./../Assets/Images/bgs/login-bg-bottom.png";
 import YellowBg from "../Assets/Images/bgs/yellow-bg.png";
 
+import YoutubeLogo from "../Assets/Images/youtube_logo.png";
+import CabLogo from "../Assets/Images/cab_logo.png";
+import FbLogo from "../Assets/Images/fb_logo.png";
+import InstaLogo from "../Assets/Images/insta_logo.png";
+import TwitterLogo from "../Assets/Images/twitter_logo.png";
+import TelegramLogo from "../Assets/Images/telegram_logo.png";
+
 export const LocalImages = {
   leaveWings: LeaveWings,
   michaelJaco: MichaelJaco,
@@ -33,6 +40,12 @@ export const LocalImages = {
   eyeClose: EyeClose,
   lock: Lock,
   user: User,
-  loginBottomBg:loginBotMountain,
+  loginBottomBg: loginBotMountain,
   yellowBg: YellowBg,
+  youtubeLogo: YoutubeLogo,
+  cabLogo: CabLogo,
+  fbLogo: FbLogo,
+  instaLogo: InstaLogo,
+  twitterLogo: TwitterLogo,
+  telegramLogo: TelegramLogo,
 };

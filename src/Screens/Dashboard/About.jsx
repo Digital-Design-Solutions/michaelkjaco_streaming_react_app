@@ -23,7 +23,7 @@ export const About = () => {
               alignItems: "center",
             }}
           >
-            <Typography component={"h1"} variant="h4" fontSize={"30px"} sx={{pt: 3}} className="font-gloucester">
+            <Typography component={"h1"} variant="h4" fontSize={"42px"} sx={{pt: 3}} className="font-gloucester">
               {Strings.aboutIntuitiveWarriorChannel}
             </Typography>
             <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
@@ -55,7 +55,7 @@ export const About = () => {
           <img
             src={LocalImages.michaelJaco}
             style={{
-              width: "95%",
+              width: "120%",
               height: "100%",
               objectFit: "cover",
               // position: "absolute",
@@ -63,7 +63,7 @@ export const About = () => {
               left: 0,
               // alignContent: "end",
               overflow: "hidden",
-              transform: "translateX(20%)",
+              transform: "translateX(0%)",
             }}
             alt=""
           />
