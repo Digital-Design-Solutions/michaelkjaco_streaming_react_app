@@ -16,11 +16,29 @@ import "swiper/css/navigation";
 
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import { VideoCard } from "../../Components/VideoCard";
+import { SubscriptionCard } from "../../Components/SubscriptionCard";
+import { SideSocialLinks } from "../../Components/SideSocialLinks";
 
 const listData = [
   LocalImages.michaelJaco,
   LocalImages.mountain,
   LocalImages.topHeader,
+];
+
+const subscriptionData = [
+  "Access to IWC Social Platform",
+  "IWC Private Livestreams",
+  "IWC Member-Exclusive Videos",
+  "Save 5% off Michael Jaco`s Master-Level Courses",
+  "Save 5% off Michael Jac`s Gear",
+];
+
+const subscriptionData1 = [
+  "Access to IWC Social Platform",
+  "IWC Private Livestreams",
+  "IWC Member-Exclusive Videos",
+  "Save 10% off Michael Jaco`s Master-Level Courses",
+  "Save 10% off Michael Jac`s Gear",
 ];
 
 function Dashboard() {
@@ -131,7 +149,7 @@ function Dashboard() {
       <Box sx={{ marginTop: "-15%" }}>
         <About />
       </Box>
-      <Container sx={{ mt: "-12%" }}>
+      <Container sx={{ mt: "-12%", mb: '4%' }}>
         <Box
           sx={{
             display: "flex",
@@ -158,7 +176,7 @@ function Dashboard() {
           </Typography>
           <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
         </Box>
-        <Container>
+        <Container sx={{ height: '55vh'}}>
           <Box sx={{ boxSizing: "border-box" }}>
             {showSwiper && (
               <Swiper
@@ -185,18 +203,32 @@ function Dashboard() {
                   overflow: "hidden",
                 }}
               >
-                {listData.map((item) => (
-                  <SwiperSlide style={{ width: 500, height: 400 }}>
-                    <VideoCard
-                      description={
-                        "Start saving your time with Framer Wireframe Web UI Kit."
-                      }
-                      title={"Admin Panel"}
-                      timeStamp={"01:34:45"}
-                      imageUrl={item}
-                    />
-                  </SwiperSlide>
-                ))}
+                <SwiperSlide style={{ width: 500, height: 550 }}>
+                  <SubscriptionCard
+                    header={"IWC Silver Membership"}
+                    body={subscriptionData}
+                    footer={"$145.00 Per Video"}
+                    headerColor="#00000029"
+                  />
+                </SwiperSlide>
+
+                <SwiperSlide style={{ width: 500, height: 550 }}>
+                  <SubscriptionCard
+                    header={"IWC Pay-Per-Video"}
+                    body={subscriptionData1}
+                    footer={"$5.00 Per Video"}
+                    headerColor=""
+                  />
+                </SwiperSlide>
+
+                <SwiperSlide style={{ width: 500, height: 550 }}>
+                  <SubscriptionCard
+                    header={"IWC Gold Membership"}
+                    body={subscriptionData}
+                    footer={"$287.50 Per Video"}
+                    headerColor="rgba(255,215,0, 0.5)"
+                  />
+                </SwiperSlide>
               </Swiper>
             )}
           </Box>
@@ -204,6 +236,7 @@ function Dashboard() {
       </Container>
       <PartnerProducts />
       <FAQ />
+      <SideSocialLinks />
     </>
   );
 }
