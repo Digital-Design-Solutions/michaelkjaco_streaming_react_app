@@ -13,17 +13,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
+import 'swiper/css/pagination';
 
-import { EffectCoverflow, Navigation } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { VideoCard } from "../../Components/VideoCard";
 import { SubscriptionCard } from "../../Components/SubscriptionCard";
 import { SideSocialLinks } from "../../Components/SideSocialLinks";
 import DiscoverWorld from "./DiscoverWorld";
 
 const listData = [
-  LocalImages.michaelJaco,
-  LocalImages.mountain,
-  LocalImages.topHeader,
+  '',
+  LocalImages.slider1,
+  '',
 ];
 
 const subscriptionData = [
@@ -97,11 +98,14 @@ function Dashboard() {
           </Box>
 
           <Container>
-            <Box sx={{ boxSizing: "border-box" }}>
+            <Box sx={{
+              //  boxSizing: "border-box" 
+            ml: '-10%', mr: '-10%'
+            }}>
               {showSwiper && (
                 <Swiper
                   navigation={true}
-                  modules={[Navigation, EffectCoverflow]}
+                  modules={[Navigation, EffectCoverflow, Pagination]}
                   initialSlide={1}
                   className="mySwiper"
                   effect={"coverflow"}
@@ -110,21 +114,22 @@ function Dashboard() {
                   coverflowEffect={{
                     rotate: 0,
                     stretch: 100,
-                    depth: 1000,
+                    depth: 600,
                     modifier: 1,
                     slideShadows: true,
                   }}
-                  spaceBetween={0}
+                  pagination={true}
+                  spaceBetween={2}
                   slidesPerView={2}
                   autoplay
                   loop
                   style={{
-                    width: "100%",
-                    overflow: "hidden",
+                    width: "90%",
+                    overflow: "hidden"
                   }}
                 >
                   {listData.map((item) => (
-                    <SwiperSlide style={{ width: 500, height: 400 }}>
+                    <SwiperSlide style={{ width: 600, height: 300 }}>
                       <VideoCard
                         description={
                           "Start saving your time with Framer Wireframe Web UI Kit."
@@ -182,7 +187,7 @@ function Dashboard() {
               <Swiper
                 navigation={true}
                 modules={[Navigation, EffectCoverflow]}
-                initialSlide={1}
+                initialSlide={2}
                 className="mySwiper"
                 effect={"coverflow"}
                 grabCursor={true}
@@ -190,7 +195,7 @@ function Dashboard() {
                 coverflowEffect={{
                   rotate: 0,
                   stretch: 100,
-                  depth: 1000,
+                  depth: 600,
                   modifier: 1,
                   slideShadows: true,
                 }}
