@@ -27,6 +27,7 @@ import discoverImg01 from "./../Assets/Images/img1.png";
 import discoverImg02 from "./../Assets/Images/img2.png";
 import discoverImg03 from "./../Assets/Images/img3.png";
 import discoverImg04 from "./../Assets/Images/img4.png";
+import Slider1 from "./../Assets/Images/slider_1.jpeg";
 
 export const LocalImages = {
   leaveWings: LeaveWings,
@@ -55,5 +56,6 @@ export const LocalImages = {
   discoverImg01: discoverImg01,
   discoverImg02: discoverImg02,
   discoverImg03: discoverImg03,
-  discoverImg04: discoverImg04
+  discoverImg04: discoverImg04,
+  slider1: Slider1
 };

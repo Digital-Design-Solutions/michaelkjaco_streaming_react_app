@@ -64,12 +64,13 @@ const FAQ = () => {
           variant="h4"
           gutterBottom
           className="font-gloucester"
+          fontSize={'48px'}
           sx={{ p: 0, m: 0 }}
         >
           Frequently Asked Questions
         </Typography>
         <Box>
-          <img src={LocalImages.leaveWings} alt="" width={80} />
+          <img src={LocalImages.leaveWings} alt="" width={'120px'} />
         </Box>
         <Box sx={{ justifyContent: "center", alignItems: "center" }}>
           <Box className="faq-content">

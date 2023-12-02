@@ -9,7 +9,7 @@ const listData = [
     label: "Root Wellness",
   },
   {
-    imageUrl: LocalImages.LifeWave,
+    imageUrl: LocalImages.lifeWave,
     label: "LifeWave",
   },
   {
