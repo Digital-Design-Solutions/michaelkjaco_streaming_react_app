@@ -23,6 +23,10 @@ import FbLogo from "../Assets/Images/fb_logo.png";
 import InstaLogo from "../Assets/Images/insta_logo.png";
 import TwitterLogo from "../Assets/Images/twitter_logo.png";
 import TelegramLogo from "../Assets/Images/telegram_logo.png";
+import discoverImg01 from "./../Assets/Images/img1.png";
+import discoverImg02 from "./../Assets/Images/img2.png";
+import discoverImg03 from "./../Assets/Images/img3.png";
+import discoverImg04 from "./../Assets/Images/img4.png";
 
 export const LocalImages = {
   leaveWings: LeaveWings,
@@ -48,4 +52,8 @@ export const LocalImages = {
   instaLogo: InstaLogo,
   twitterLogo: TwitterLogo,
   telegramLogo: TelegramLogo,
+  discoverImg01: discoverImg01,
+  discoverImg02: discoverImg02,
+  discoverImg03: discoverImg03,
+  discoverImg04: discoverImg04
 };

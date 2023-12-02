@@ -18,6 +18,7 @@ import { EffectCoverflow, Navigation } from "swiper/modules";
 import { VideoCard } from "../../Components/VideoCard";
 import { SubscriptionCard } from "../../Components/SubscriptionCard";
 import { SideSocialLinks } from "../../Components/SideSocialLinks";
+import DiscoverWorld from "./DiscoverWorld";
 
 const listData = [
   LocalImages.michaelJaco,
@@ -54,7 +55,6 @@ function Dashboard() {
     <>
       <Header />
       <Box sx={{ width: "100%" }} className="header-bg" />
-
       <Box display="flex" height="100vh" width={"100vw"}>
         <Box
           sx={{
@@ -234,6 +234,7 @@ function Dashboard() {
           </Box>
         </Container>
       </Container>
+      <DiscoverWorld />
       <PartnerProducts />
       <FAQ />
       <SideSocialLinks />
