@@ -26,6 +26,7 @@ export const Strings = {
   perYear: "Per Year",
   perVideo: "Per Video",
   discoverAWorldOfContent: "Discover a World of  Content",
+  immerseYourself: "Immerse Yourself in a Spectrum of Content and Enjoy Access to a Private Social Media Community, Direct Live Stream Interactions",
   shopMjPartnersAndSave: "Shop MJ`s Partners and Save",
   frequentylyAskedQuestions: "Frequently Asked Questions",
   whenDoesMichaelJacoGoLive: "When does Michael Jaco go Live?",
