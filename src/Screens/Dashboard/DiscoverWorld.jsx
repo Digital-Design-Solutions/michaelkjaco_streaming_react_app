@@ -54,7 +54,7 @@ const DiscoverWorld = () => {
                 </div>
               </Box>
             </Grid>
-            <Grid xs={6}>
+            <Grid xs={12} md={6}>
               <Box
               sx={{
                 display: "flex",

@@ -9,6 +9,7 @@ export const Strings = {
   aboutIntuitiveWarriorChannel: "About Intuitive Warrior Channel",
   watchUsLive: "Watch Us Live",
   upcomingStreamingSessions: "Upcoming Streaming Sessions",
+  homeIsBehind: "Home is behind, the world ahead and there are many paths to tread through shadows to the edge",
   viewSchedule: "View Schedule",
   iwcLive: "IWC Live",
   watchNow: "Watch Now",
