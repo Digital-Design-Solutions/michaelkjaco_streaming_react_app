@@ -28,6 +28,9 @@ import discoverImg02 from "./../Assets/Images/img2.png";
 import discoverImg03 from "./../Assets/Images/img3.png";
 import discoverImg04 from "./../Assets/Images/img4.png";
 import Slider1 from "./../Assets/Images/slider_1.jpeg";
+import tvPlus from "./../Assets/Images/tv_plus.png";
+import liveTv from "./../Assets/Images/live_tv.png";
+import playBtnTop from "./../Assets/Images/play_button_top.png";
 
 export const LocalImages = {
   leaveWings: LeaveWings,
@@ -57,5 +60,8 @@ export const LocalImages = {
   discoverImg02: discoverImg02,
   discoverImg03: discoverImg03,
   discoverImg04: discoverImg04,
-  slider1: Slider1
+  slider1: Slider1,
+  tvPlus: tvPlus,
+  liveTv: liveTv,
+  playBtnTop: playBtnTop,
 };

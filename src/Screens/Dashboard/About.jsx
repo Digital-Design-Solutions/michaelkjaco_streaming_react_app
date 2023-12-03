@@ -4,6 +4,7 @@ import { Typography, Box, Container } from "@mui/material";
 
 import { Strings } from "../../Utils/strings";
 import { LocalImages } from "../../Utils/images";
+import UpcomingStreaming from "./UpcomingStreaming";
 
 const txt1 =
   "Michael Jaco is a retired veteran with over 24 years in Naval Special Warfare and over two years in Naval Diving and Salvage. Over 11 years as a contract and direct contract security operative for US State Department and CIA operations in Combat Zones. Dedicated a total of 35 years serving the US Government in high-risk environments.";
@@ -14,48 +15,51 @@ export const About = () => {
   return (
     <>
     <div style={{}} className="about-content">
-      <Grid container spacing={2}>
-        <Grid item xs={5} marginLeft={"6%"}>
+      <Grid container>
+        <Grid item xs={12} md={5}>
+          <Box sx={{marginLeft: "6%"}}>
           <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography component={"h1"} variant="h4" fontSize={"42px"} sx={{pt: 3}} className="font-gloucester">
-              {Strings.aboutIntuitiveWarriorChannel}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",       
+              }}
+            >
+              <Typography component={"h1"} variant="h4" fontSize={"42px"} sx={{pt: 30}} className="font-gloucester">
+                {Strings.aboutIntuitiveWarriorChannel}
+              </Typography>
+              <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
+            </div>
+            <Box sx={{mr: 8}}>
+            <Typography
+              component={"body"}
+              variant="body1"
+              lineHeight={"28px"}
+              marginTop={"24px"}
+              fontSize={"16px"}
+              className="font-notoSans"
+            >
+              {txt1}
             </Typography>
-            <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
-          </div>
-        <Box sx={{mr: 8}}>
-          <Typography
-            component={"body"}
-            variant="body1"
-            lineHeight={"28px"}
-            marginTop={"24px"}
-            fontSize={"16px"}
-            className="font-notoSans"
-          >
-            {txt1}
-          </Typography>
-          <Typography
-            component={"body"}
-            variant="body1"
-            lineHeight={"28px"}
-            marginTop={"32px"}
-            fontSize={"16px"}
-            className="font-notoSans"
-          >
-            {txt2}
-          </Typography>
+            <Typography
+              component={"body"}
+              variant="body1"
+              lineHeight={"28px"}
+              marginTop={"32px"}
+              fontSize={"16px"}
+              className="font-notoSans"
+            >
+              {txt2}
+            </Typography>
+            </Box>
           </Box>
         </Grid>
-        <Grid item xs={6} sx={{ marginTop: "-120px" }}>
+        <Grid item xs={12} md={7} sx={{ marginTop: "-50px" }}>
           <img
             src={LocalImages.michaelJaco}
             style={{
-              width: "120%",
+              // width: "120%",
+              width: "100%",
               height: "100%",
               objectFit: "cover",
               // position: "absolute",
@@ -71,19 +75,8 @@ export const About = () => {
       </Grid>
     </div>
     <Box className="live-streaming-content">
-      <Container className="live-streaming-left">
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-      
+      <Container className="live-streaming01">
+      <UpcomingStreaming />      
       </Container>
     </Box>
     </>

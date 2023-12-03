@@ -23,6 +23,21 @@
 .color-gray {
   color: gray
 }
+.color-white {
+  color: #ffffff!important;
+}
+.text-left {
+  text-align: left!important;
+}
+.btn-style01 {
+  border: 1.5px solid #fff;
+  background-color: #1A315C;
+  border-radius: 4px;
+  align-self: flex-start;
+  padding: 8px 4%;
+  color: #fff;
+  font-size: 12px;
+}
 
 /* Login */
 .login-card {
@@ -195,17 +210,25 @@ h3 {
 .live-streaming-content {
   background: url(./Assets/Images/bgs/streaming-bg.png) repeat;
   background-position-x: center;
-  background-position-y: 50%;
+  /* background-position-y: 90%; */
   background-size: cover;
-  top: -250px;
+  top: -300px;
   min-height: 700px;
   position: relative;
+  box-sizing: border-box;
 }
 
-.live-streaming-left {
+.live-streaming01 {
   position: relative;
-  top: 250px;
+  top: 200px;
 }
+.scheduleCardContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
 
 /* Media Queries */
 @media screen and (max-width: 995px) {

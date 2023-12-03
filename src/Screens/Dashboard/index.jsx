@@ -20,6 +20,7 @@ import { VideoCard } from "../../Components/VideoCard";
 import { SubscriptionCard } from "../../Components/SubscriptionCard";
 import { SideSocialLinks } from "../../Components/SideSocialLinks";
 import DiscoverWorld from "./DiscoverWorld";
+import UpcomingStreaming from "./UpcomingStreaming";
 
 const listData = [
   '',
@@ -56,18 +57,28 @@ function Dashboard() {
     <>
       <Header />
       <Box sx={{ width: "100%" }} className="header-bg" />
-      <Box display="flex" height="100vh" width={"100vw"}>
+      {/* <Box display="flex" height="100vh" width={"100vw"}> */}
+      <Box display="flex" height="100vh">
         <Box
           sx={{
-            width: "120vw",
-            marginLeft: "-10%",
-            marginTop: "-13%",
+            // width: "120vw",
+            // marginLeft: "-10%",
+            // marginTop: "-13%",
             // height: "100vh",
+            // backgroundColor: "#fff",
+            // borderTopLeftRadius: "50%",
+            // borderTopRightRadius: "50%",
+            // padding: "5% 0px 0px 0px",
+            // position: "absolute",
+            // flex: 1,
+
+            width: "100%",
             backgroundColor: "#fff",
             borderTopLeftRadius: "50%",
             borderTopRightRadius: "50%",
-            padding: "5% 0px 0px 0px",
-            position: "absolute",
+            position: "relative",
+            marginTop: "-10%",
+            padding: "5% 0",
             flex: 1,
           }}
         >
@@ -152,7 +163,7 @@ function Dashboard() {
         </Box>
       </Box>
       <Box sx={{ marginTop: "-15%" }}>
-        <About />
+        <About />       
       </Box>
       <Container sx={{ mt: "-12%", mb: '4%' }}>
         <Box
