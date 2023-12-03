@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { VideoCard } from "../../Components/VideoCard";
@@ -22,11 +22,7 @@ import { SideSocialLinks } from "../../Components/SideSocialLinks";
 import DiscoverWorld from "./DiscoverWorld";
 import UpcomingStreaming from "./UpcomingStreaming";
 
-const listData = [
-  '',
-  LocalImages.slider1,
-  '',
-];
+const listData = ["", LocalImages.slider1, ""];
 
 const subscriptionData = [
   "Access to IWC Social Platform",
@@ -163,9 +159,6 @@ function Dashboard() {
                   <span className="watchmore-btn" />
                 </button>
               </div>
-              {/* <Button variant="contained" sx={{ background: "#1A315C" }}>
-                <span style={{ color: "#ffffff" }}>WATCH MORE</span>
-              </Button> */}
             </Box>
           </Container>
         </Box>

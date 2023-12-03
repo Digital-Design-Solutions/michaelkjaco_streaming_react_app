@@ -212,15 +212,15 @@ h3 {
   background-position-x: center;
   /* background-position-y: 90%; */
   background-size: cover;
-  top: -300px;
-  min-height: 700px;
+  top: -400px;
+  min-height: 900px;
   position: relative;
   box-sizing: border-box;
 }
 
 .live-streaming01 {
   position: relative;
-  top: 200px;
+  top: 70px;
 }
 .scheduleCardContent {
   display: flex;
