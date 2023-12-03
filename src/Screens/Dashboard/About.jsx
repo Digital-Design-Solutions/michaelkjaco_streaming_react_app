@@ -17,7 +17,7 @@ export const About = () => {
     <div style={{}} className="about-content">
       <Grid container>
         <Grid item xs={12} md={5}>
-          <Box sx={{marginLeft: "6%"}}>
+          <Box sx={{marginLeft: "16%"}}>
           <div
               style={{
                 display: "flex",
@@ -25,7 +25,7 @@ export const About = () => {
                 alignItems: "center",       
               }}
             >
-              <Typography component={"h1"} variant="h4" fontSize={"42px"} sx={{pt: 30}} className="font-gloucester">
+              <Typography component={"h1"} variant="h4" fontSize={"42px"} sx={{pt: 10}} className="font-gloucester">
                 {Strings.aboutIntuitiveWarriorChannel}
               </Typography>
               <img src={LocalImages.leaveWings} style={{ width: "120px" }} />

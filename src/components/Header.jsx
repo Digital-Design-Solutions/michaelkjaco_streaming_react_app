@@ -75,6 +75,48 @@ function Header() {
           <Box sx={{flexGrow: 1, textAlign:  { xs: 'center', md: 'left' } }}><img style={{width: "150px", position: "absolute", top: -10}} src={LocalImages.logo} alt="Logo" /></Box>
           <Box sx={{ flexGrow: 0 }}>
             <Box sx={{display:"flex"}}>
+            
+            <Stack spacing={2} direction="row">
+                <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                display: { xs: 'block', sm: 'none' },
+                }}
+                >
+                {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu} className='header-left-menu'>
+                  {/* <Typography textAlign="center" className='header-left-menu'><span className='header-left-menu'> */}
+                    <li className='header-left-menu'>{page}</li>
+                    {/* </span></Typography> */}
+                </MenuItem>
+                ))}
+                </Menu>
+                <IconButton
+                size="medium"    
+                sx={{ display: { xs: 'none', md: 'flex' } }}       
+                className='header-menu-icon' >
+                <SearchOutlinedIcon />
+                </IconButton>
+                <IconButton
+                size="medium"                        
+                className='header-menu-icon' >
+                <PersonIcon />
+                </IconButton>
+                <Button variant="contained" sx={{display: {xs: "none", md:"flex"}, background: "#FFA903", color: "#fff"}}>SIGN UP NOW</Button>               
+                            
+            </Stack>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -87,45 +129,6 @@ function Header() {
               <MenuIcon />
             </IconButton>            
           </Box>
-            <Stack spacing={2} direction="row">
-                <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} className='header-left-menu'>
-                  {/* <Typography textAlign="center" className='header-left-menu'><span className='header-left-menu'> */}
-                    <li className='header-left-menu'>{page}</li>
-                    {/* </span></Typography> */}
-                </MenuItem>
-              ))}
-            </Menu>
-                <IconButton
-                size="medium"           
-                style={{ borderRadius: "50%", backgroundColor: "orange", color: "#fff"}} >
-                <SearchOutlinedIcon />
-                </IconButton>
-                <IconButton
-                size="medium"                  
-                style={{ borderRadius: "50%", backgroundColor: "orange", color: "#fff"}} >
-                <PersonIcon />
-                </IconButton>
-                <Button variant="contained" sx={{background: "#FFA903", color: "#fff"}}>SIGN UP NOW</Button>               
-            </Stack>
             </Box>           
           </Box>
         </Toolbar>

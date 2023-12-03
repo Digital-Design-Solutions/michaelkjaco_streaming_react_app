@@ -162,7 +162,7 @@ function Dashboard() {
           </Container>
         </Box>
       </Box>
-      <Box sx={{ marginTop: "-15%" }}>
+      <Box className='about-content-top'>
         <About />       
       </Box>
       <Container sx={{ mt: "-12%", mb: '4%' }}>

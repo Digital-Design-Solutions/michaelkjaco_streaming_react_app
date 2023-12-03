@@ -86,7 +86,7 @@ const FAQ = () => {
                   expanded !== "panel1" ? (
                     <AddCircleIcon sx={{ fontSize: "2rem" }} />
                   ) : (
-                    <RemoveCircleIcon sx={{ fontSize: "2rem" }} />
+                    <RemoveCircleIcon sx={{ fontSize: "2rem",transform: "rotate(90deg)" }} />
                   )
                 }
               >
@@ -114,7 +114,7 @@ const FAQ = () => {
                   expanded !== "panel2" ? (
                     <AddCircleIcon sx={{ fontSize: "2rem" }} />
                   ) : (
-                    <RemoveCircleIcon sx={{ fontSize: "2rem" }} />
+                    <RemoveCircleIcon sx={{ fontSize: "2rem",transform: "rotate(90deg)" }} />
                   )
                 }
               >
@@ -144,7 +144,7 @@ const FAQ = () => {
                   expanded !== "panel3" ? (
                     <AddCircleIcon sx={{ fontSize: "2rem" }} />
                   ) : (
-                    <RemoveCircleIcon sx={{ fontSize: "2rem" }} />
+                    <RemoveCircleIcon sx={{ fontSize: "2rem",transform: "rotate(90deg)" }} />
                   )
                 }
               >
@@ -174,7 +174,7 @@ const FAQ = () => {
                   expanded !== "panel4" ? (
                     <AddCircleIcon sx={{ fontSize: "2rem" }} />
                   ) : (
-                    <RemoveCircleIcon sx={{ fontSize: "2rem" }} />
+                    <RemoveCircleIcon sx={{ fontSize: "2rem",transform: "rotate(90deg)" }} />
                   )
                 }
               >
@@ -200,6 +200,13 @@ const FAQ = () => {
               <AccordionSummary
                 aria-controls="panel5d-content"
                 id="panel5d-header"
+                expandIcon={
+                  expanded !== "panel5" ? (
+                    <AddCircleIcon sx={{ fontSize: "2rem" }} />
+                  ) : (
+                    <RemoveCircleIcon sx={{ fontSize: "2rem",transform: "rotate(90deg)" }} />
+                  )
+                }
               >
                 <Typography>
                   Are there any discounts or promotions available for

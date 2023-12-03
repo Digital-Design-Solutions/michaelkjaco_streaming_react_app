@@ -126,6 +126,15 @@ li.header-left-menu,
 .MuiButtonBase-root:hover {
   color: #FFA903 !important;
 }
+.header-menu-icon {
+  border-radius: 50%; 
+  background-color: #FFA903!important;
+  color: #fff;
+}
+.header-menu-icon:hover {
+  background-color: #1A315C!important;
+  color: #FFA903!important;
+}
 
 h3 {
   font-family: gloucester;
@@ -198,7 +207,10 @@ h3 {
   width: 400px !important;
   height: 400px !important;
 }
-
+.about-content-top {
+  margin-top: -200px!important;
+  position: relative;
+}
 .about-content {
   background-image: url(./Assets/Images/bgs/yellow-bg.png);
   background-repeat: no-repeat;
@@ -255,6 +267,9 @@ h3 {
 
   .login-card {
     padding: 5%;
+  }
+  .about-content-top {
+    margin-top: -250px;
   }
 }
 
