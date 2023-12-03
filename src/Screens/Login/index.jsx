@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Card,
@@ -18,6 +18,7 @@ import "./Login.css";
 import CustomInput from "../../Components/Form/CustomInput";
 import { isValidString } from "../../Utils/validators";
 import { LocalImages } from "../../Utils/images";
+import { AuthContext } from "../../Context/AuthContext";
 
 const initialValues = {
   email: "",
@@ -30,6 +31,10 @@ const signinSchema = Yup.object().shape({
 });
 
 const Login = () => {
+
+  const { toggleLogin } = useContext(AuthContext);
+
+
   const loginForm = useFormik({
     initialValues,
     validationSchema: signinSchema,
@@ -39,6 +44,11 @@ const Login = () => {
 
   const doLogin = async (event) => {
     event.preventDefault();
+    toggleLogin();
+    loginForm.submitForm(()=>{
+      if(loginForm.isValid){
+      }
+    })
   };
 
   const formContent = () => (
@@ -117,6 +127,7 @@ const Login = () => {
         type="submit"
         className="login-btn-submit"
         disabled={!loginForm.isValid}
+        onClick={doLogin}
       >
         Submit
       </button>

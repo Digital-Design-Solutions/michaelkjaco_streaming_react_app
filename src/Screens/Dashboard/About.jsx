@@ -14,71 +14,77 @@ const txt2 =
 export const About = () => {
   return (
     <>
-    <div style={{}} className="about-content">
-      <Grid container>
-        <Grid item xs={12} md={5}>
-          <Box sx={{marginLeft: "16%"}}>
-          <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",       
-              }}
-            >
-              <Typography component={"h1"} variant="h4" fontSize={"42px"} sx={{pt: 10}} className="font-gloucester">
-                {Strings.aboutIntuitiveWarriorChannel}
-              </Typography>
-              <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
-            </div>
-            <Box sx={{mr: 8}}>
-            <Typography
-              component={"body"}
-              variant="body1"
-              lineHeight={"28px"}
-              marginTop={"24px"}
-              fontSize={"16px"}
-              className="font-notoSans"
-            >
-              {txt1}
-            </Typography>
-            <Typography
-              component={"body"}
-              variant="body1"
-              lineHeight={"28px"}
-              marginTop={"32px"}
-              fontSize={"16px"}
-              className="font-notoSans"
-            >
-              {txt2}
-            </Typography>
+      <div style={{}} className="about-content">
+        <Grid container>
+          <Grid item xs={12} md={5}>
+            <Box sx={{ marginLeft: "6%" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Typography
+                  component={"h1"}
+                  variant="h4"
+                  fontSize={"42px"}
+                  sx={{ pt: 30 }}
+                  className="font-gloucester"
+                >
+                  {Strings.aboutIntuitiveWarriorChannel}
+                </Typography>
+                <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
+              </div>
+              <Box sx={{ mr: 8 }}>
+                <Typography
+                  component={"body"}
+                  variant="body1"
+                  lineHeight={"28px"}
+                  marginTop={"24px"}
+                  fontSize={"16px"}
+                  className="font-notoSans"
+                >
+                  {txt1}
+                </Typography>
+                <Typography
+                  component={"body"}
+                  variant="body1"
+                  lineHeight={"28px"}
+                  marginTop={"32px"}
+                  fontSize={"16px"}
+                  className="font-notoSans"
+                >
+                  {txt2}
+                </Typography>
+              </Box>
             </Box>
-          </Box>
+          </Grid>
+          <Grid item xs={12} md={7} sx={{ marginTop: "-50px" }}>
+            <img
+              src={LocalImages.michaelJaco}
+              style={{
+                // width: "120%",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                // position: "absolute",
+                top: 0,
+                left: 0,
+                // alignContent: "end",
+                overflow: "hidden",
+                transform: "translateX(0%)",
+              }}
+              alt=""
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={12} md={7} sx={{ marginTop: "-50px" }}>
-          <img
-            src={LocalImages.michaelJaco}
-            style={{
-              // width: "120%",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              // position: "absolute",
-              top: 0,
-              left: 0,
-              // alignContent: "end",
-              overflow: "hidden",
-              transform: "translateX(0%)",
-            }}
-            alt=""
-          />
-        </Grid>
-      </Grid>
-    </div>
-    <Box className="live-streaming-content">
-      <Container className="live-streaming01">
-      <UpcomingStreaming />      
-      </Container>
-    </Box>
+      </div>
+      <Box className="live-streaming-content">
+        <Container className="live-streaming01">
+          <UpcomingStreaming />
+        </Container>
+      </Box>
     </>
   );
 };
