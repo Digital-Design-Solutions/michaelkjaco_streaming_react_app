@@ -20,7 +20,6 @@ import { VideoCard } from "../../Components/VideoCard";
 import { SubscriptionCard } from "../../Components/SubscriptionCard";
 import { SideSocialLinks } from "../../Components/SideSocialLinks";
 import DiscoverWorld from "./DiscoverWorld";
-import UpcomingStreaming from "./UpcomingStreaming";
 
 const listData = ["", LocalImages.slider1, ""];
 

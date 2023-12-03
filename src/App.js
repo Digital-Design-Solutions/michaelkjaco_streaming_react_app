@@ -1,19 +1,8 @@
+import { BrowserRouter } from "react-router-dom";
+
 import "./App.css";
-
-// Import Swiper React components
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/effect-coverflow";
-// import "swiper/css/navigation";
-
-// import required modules
-// import { EffectCoverflow, Navigation } from "swiper/modules";
-// import { useEffect, useState } from "react";
-// import { VideoCard } from "./Components/VideoCard";
-import Dashboard from "./Screens/Dashboard";
-import Login from "./Screens/Login";
+import AuthProvider from "./Context/AuthContext";
+import AppRoutes from "./Navigations";
 
 // const listData = [
 //   "https://carousel-slider.uiinitiative.com/images/thor-ragnarok.jpg",
@@ -27,10 +16,11 @@ import Login from "./Screens/Login";
 
 function App() {
   return (
-    <div>
-      <Dashboard />
-      {/* <Login /> */}
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </AuthProvider>
   );
   // return (
   //   <div style={{ margin: "0px 4%" }}>
