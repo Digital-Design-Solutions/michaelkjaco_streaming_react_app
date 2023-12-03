@@ -212,15 +212,15 @@ h3 {
   background-position-x: center;
   /* background-position-y: 90%; */
   background-size: cover;
-  top: -300px;
-  min-height: 700px;
+  top: -400px;
+  min-height: 900px;
   position: relative;
   box-sizing: border-box;
 }
 
 .live-streaming01 {
   position: relative;
-  top: 200px;
+  top: 70px;
 }
 .scheduleCardContent {
   display: flex;
@@ -268,4 +268,34 @@ h3 {
   flex-direction: column;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+
+.watchmore-btn-outer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.watchmore-btn-inner-container {
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #1A315C;
+  width: 130px;
+  min-height: 40px;
+  border: none;
+}
+
+.watchmore-btn-inner-container::after {
+  content: "WATCH MORE";
+}
+
+.watchmore-btn-inner-container:hover::after {
+  content: "IWC LOGIN";
+}
+
+.watchmore-btn-inner-container:hover {
+  background: #FFA903;
 }

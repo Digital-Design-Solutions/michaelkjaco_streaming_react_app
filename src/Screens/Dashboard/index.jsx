@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { VideoCard } from "../../Components/VideoCard";
@@ -22,11 +22,7 @@ import { SideSocialLinks } from "../../Components/SideSocialLinks";
 import DiscoverWorld from "./DiscoverWorld";
 import UpcomingStreaming from "./UpcomingStreaming";
 
-const listData = [
-  '',
-  LocalImages.slider1,
-  '',
-];
+const listData = ["", LocalImages.slider1, ""];
 
 const subscriptionData = [
   "Access to IWC Social Platform",
@@ -109,10 +105,13 @@ function Dashboard() {
           </Box>
 
           <Container>
-            <Box sx={{
-              //  boxSizing: "border-box" 
-            ml: '-10%', mr: '-10%'
-            }}>
+            <Box
+              sx={{
+                //  boxSizing: "border-box"
+                ml: "-10%",
+                mr: "-10%",
+              }}
+            >
               {showSwiper && (
                 <Swiper
                   navigation={true}
@@ -136,7 +135,7 @@ function Dashboard() {
                   loop
                   style={{
                     width: "90%",
-                    overflow: "hidden"
+                    overflow: "hidden",
                   }}
                 >
                   {listData.map((item) => (
@@ -155,17 +154,19 @@ function Dashboard() {
               )}
             </Box>
             <Box sx={{ justifyContent: "center", textAlign: "center", pt: 4 }}>
-              <Button variant="contained" sx={{ background: "#1A315C" }}>
-                <span style={{ color: "#ffffff" }}>WATCH MORE</span>
-              </Button>
+              <div className="watchmore-btn-outer-container">
+                <button className="watchmore-btn-inner-container">
+                  <span className="watchmore-btn" />
+                </button>
+              </div>
             </Box>
           </Container>
         </Box>
       </Box>
       <Box sx={{ marginTop: "-15%" }}>
-        <About />       
+        <About />
       </Box>
-      <Container sx={{ mt: "-12%", mb: '4%' }}>
+      <Container sx={{ mt: "-12%", mb: "4%" }}>
         <Box
           sx={{
             display: "flex",
@@ -192,7 +193,7 @@ function Dashboard() {
           </Typography>
           <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
         </Box>
-        <Container sx={{ height: '55vh'}}>
+        <Container sx={{ height: "55vh" }}>
           <Box sx={{ boxSizing: "border-box" }}>
             {showSwiper && (
               <Swiper
