@@ -17,7 +17,7 @@ export const About = () => {
       <div style={{}} className="about-content">
         <Grid container>
           <Grid item xs={12} md={5}>
-            <Box sx={{ marginLeft: "6%" }}>
+            <Box sx={{ marginLeft: "16%" }}>
               <div
                 style={{
                   display: "flex",
@@ -29,7 +29,7 @@ export const About = () => {
                   component={"h1"}
                   variant="h4"
                   fontSize={"42px"}
-                  sx={{ pt: 30 }}
+                  sx={{ pt: 10 }}
                   className="font-gloucester"
                 >
                   {Strings.aboutIntuitiveWarriorChannel}
@@ -69,8 +69,9 @@ export const About = () => {
                 height: "100%",
                 objectFit: "cover",
                 // position: "absolute",
-                top: 0,
-                left: 0,
+                position: "relative", // none
+                top: 30, //0
+                left: 100, //0
                 // alignContent: "end",
                 overflow: "hidden",
                 transform: "translateX(0%)",

@@ -129,11 +129,22 @@ li.header-left-menu,
 .header-menu-icon {
   border-radius: 50%; 
   background-color: #FFA903!important;
-  color: #fff;
+  color: #fff!important;
 }
-.header-menu-icon:hover {
-  background-color: #1A315C!important;
-  color: #FFA903!important;
+.icon-style01, .header-signup  {
+  background-color: #FFA903!important;
+  color: #fff!important;
+}
+.icon-style01:hover {
+  background-color: #FFA903!important;
+  color: #1A315C!important;
+}
+.header-menu-icon:hover  {
+  color: #1A315C!important;
+}
+.header-signup:hover {
+  background-color: #FFA903!important;
+  color: #1A315C!important;
 }
 
 h3 {
@@ -177,7 +188,7 @@ h3 {
 .faq-bg {
   background: url(./Assets/Images/faq_bg.png) no-repeat;
   background-size: cover;
-  background-position: left -90px;
+  background-position: left bottom;
   padding: 10% 0;
 }
 
@@ -210,6 +221,7 @@ h3 {
 .about-content-top {
   margin-top: -200px!important;
   position: relative;
+  bottom: -100px;
 }
 .about-content {
   background-image: url(./Assets/Images/bgs/yellow-bg.png);
@@ -225,7 +237,7 @@ h3 {
   /* background-position-y: 90%; */
   background-size: cover;
   top: -400px;
-  min-height: 900px;
+  min-height: 750px;
   position: relative;
   box-sizing: border-box;
 }
@@ -270,6 +282,7 @@ h3 {
   }
   .about-content-top {
     margin-top: -250px;
+    bottom: -200px;
   }
 }
 

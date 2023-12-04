@@ -92,19 +92,7 @@ function Header() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Box sx={{ display: "flex" }}>
-              <Box sx={{ display: { xs: "flex", md: "none" } }}>
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                  color="inherit"
-                >
-                  <MenuIcon />
-                </IconButton>
-              </Box>
-              <Stack spacing={2} direction="row">
+            <Stack spacing={2} direction="row">
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorElNav}
@@ -120,7 +108,7 @@ function Header() {
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
-                    display: { xs: "block", md: "none" },
+                    display: { xs: "flex", md: "none" },
                   }}
                 >
                   {pages.map((page) => (
@@ -137,32 +125,39 @@ function Header() {
                 </Menu>
                 <IconButton
                   size="medium"
-                  style={{
-                    borderRadius: "50%",
-                    backgroundColor: "orange",
-                    color: "#fff",
-                  }}
-                >
+                  sx={{ display: { xs: 'none', md: 'flex' } }}       
+                className='header-menu-icon' >
                   <SearchOutlinedIcon />
                 </IconButton>
                 <IconButton
                   size="medium"
-                  style={{
-                    borderRadius: "50%",
-                    backgroundColor: "orange",
-                    color: "#fff",
-                  }}
-                >
+                  className='header-menu-icon'>
                   <PersonIcon />
                 </IconButton>
                 <Button
                   onClick={toggleLogin}
                   variant="contained"
-                  sx={{ background: "#FFA903", color: "#fff" }}
+                  sx={{display: {xs: "none", md:"flex"}, background: "#FFA903", color: "#fff"}}
+                  className="header-signup"
                 >
-                  SIGN UP NOW
+                  <span >SIGN UP NOW</span>
                 </Button>
               </Stack>
+              <Box sx={{ display: { xs: "flex", md: "none" } }}>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleOpenNavMenu}
+                  color="inherit"
+                  sx={{background: "#FFA903", marginLeft: 1}}
+                  className="icon-style01"
+                >
+                  <MenuIcon className="icon-style01" />
+                </IconButton>
+              </Box>
+
             </Box>
           </Box>
         </Toolbar>

@@ -49,7 +49,7 @@ const UpcomingStreaming = () => {
 
   return (
     <div style={{ color: "#fff" }}>
-      <Grid container style={{ alignItems: "center" }}>
+      <Grid container sx={{ alignItems: "center" }}>
         <Grid
           xs={12}
           md={6}
@@ -63,7 +63,7 @@ const UpcomingStreaming = () => {
             // paddingLeft: "80px",
           }}
         >
-          <Box>
+          <Box sx={{p:0, pt: 30}}>
             <Typography
               component={"h3"}
               variant="h3"
@@ -97,7 +97,7 @@ const UpcomingStreaming = () => {
               <h1 style={{ fontSize: "18px", color: "black" }}>Loading...</h1>
             </div>
           ) : (
-            <Grid xs={12} className="scheduleCardContent">
+            <Grid xs={12} className="scheduleCardContent" sx={{position: "relative", top: {xs:-150, md:30}}}>
               <div
                 style={{
                   position: "relative",

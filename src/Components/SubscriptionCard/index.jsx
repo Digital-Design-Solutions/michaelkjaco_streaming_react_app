@@ -30,7 +30,7 @@ export const SubscriptionCard = ({ header, body, footer, headerColor }) => {
           alignItems: "center",
         }}
       >
-        <p style={{ fontSize: "24px" }}>{header}</p>
+        <p sx={{ fontSize: "24px" }}>{header}</p>
       </div>
 
       <CardContent

@@ -84,6 +84,7 @@ function Dashboard() {
               justifyContent: "center",
               alignItems: "center",
               pb: 5,
+              pt: {xs: 2, md:0}
             }}
           >
             <Typography
@@ -162,7 +163,7 @@ function Dashboard() {
           </Container>
         </Box>
       </Box>
-      <Box sx={{ marginTop: "-15%" }}>
+      <Box className='about-content-top'>
         <About />
       </Box>
       <Container sx={{ mt: "-12%", mb: "4%" }}>
