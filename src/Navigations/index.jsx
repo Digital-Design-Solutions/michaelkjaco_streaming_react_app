@@ -7,6 +7,5 @@ import { AuthContext } from "../Context/AuthContext";
 export default function AppRoutes() {
   const { isLoggedIn } = useContext(AuthContext);
 
-  // return isLoggedIn ? <Authenticated /> : <UnAuthenticated />;
-  return <Authenticated />
+  return isLoggedIn ? <Authenticated /> : <UnAuthenticated />;
 }
