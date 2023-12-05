@@ -230,6 +230,13 @@ h3 {
   background-position: right 100%;
   background-size: 80% 80%;
 }
+.about-content-img {
+  background-image: url(./Assets/Images/michael_jaco.png);
+  background-repeat: no-repeat;
+  background-position: right -150px bottom 100%;
+  background-size: cover;
+  height: 100vh;
+}
 
 .live-streaming-content {
   background: url(./Assets/Images/bgs/streaming-bg.png) repeat;

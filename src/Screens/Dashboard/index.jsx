@@ -108,8 +108,8 @@ function Dashboard() {
             <Box
               sx={{
                 //  boxSizing: "border-box"
-                ml: "-10%",
-                mr: "-10%",
+                ml: {md:0, xl:"-10%"},
+                mr: {md:0, xl:"-10%"},
               }}
             >
               {showSwiper && (
