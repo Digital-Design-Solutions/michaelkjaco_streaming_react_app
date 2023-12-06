@@ -126,6 +126,26 @@ li.header-left-menu,
 .MuiButtonBase-root:hover {
   color: #FFA903 !important;
 }
+.header-menu-icon {
+  border-radius: 50%; 
+  background-color: #FFA903!important;
+  color: #fff!important;
+}
+.icon-style01, .header-signup  {
+  background-color: #FFA903!important;
+  color: #fff!important;
+}
+.icon-style01:hover {
+  background-color: #FFA903!important;
+  color: #1A315C!important;
+}
+.header-menu-icon:hover  {
+  color: #1A315C!important;
+}
+.header-signup:hover {
+  background-color: #FFA903!important;
+  color: #1A315C!important;
+}
 
 h3 {
   font-family: gloucester;
@@ -168,7 +188,7 @@ h3 {
 .faq-bg {
   background: url(./Assets/Images/faq_bg.png) no-repeat;
   background-size: cover;
-  background-position: left -90px;
+  background-position: left bottom;
   padding: 10% 0;
 }
 
@@ -198,13 +218,24 @@ h3 {
   width: 400px !important;
   height: 400px !important;
 }
-
+.about-content-top {
+  margin-top: -200px!important;
+  position: relative;
+  bottom: -100px;
+}
 .about-content {
   background-image: url(./Assets/Images/bgs/yellow-bg.png);
   background-repeat: no-repeat;
   /* background-position : calc(-100% - 400px) 40%; */
   background-position: right 100%;
   background-size: 80% 80%;
+}
+.about-content-img {
+  background-image: url(./Assets/Images/michael_jaco.png);
+  background-repeat: no-repeat;
+  background-position: right -150px bottom 100%;
+  background-size: cover;
+  height: 100vh;
 }
 
 .live-streaming-content {
@@ -213,7 +244,7 @@ h3 {
   /* background-position-y: 90%; */
   background-size: cover;
   top: -400px;
-  min-height: 900px;
+  min-height: 750px;
   position: relative;
   box-sizing: border-box;
 }
@@ -255,6 +286,10 @@ h3 {
 
   .login-card {
     padding: 5%;
+  }
+  .about-content-top {
+    margin-top: -250px;
+    bottom: -200px;
   }
 }
 

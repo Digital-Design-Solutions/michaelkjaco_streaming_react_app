@@ -18,8 +18,8 @@ const DiscoverWorld = () => {
   return (
     <div className='discover-world-main'>
       <div className='discover-world'>
-        <Grid container sx={{width: "100%"}}>
-            <Grid xs={12} md={6} xl={6} sx={{py:10}} className='discover-world-left'>
+        <Grid container sx={{width: "100%", flexDirection: {xs:"column-reverse", md:"row"}}}>
+            <Grid xs={12} md={6} xl={6} sx={{py: {sm:0, md:10}}} className='discover-world-left'>
               <Box xl="6" md="12" sm="12" xs="12">
                 <div
                   style={{
@@ -62,7 +62,8 @@ const DiscoverWorld = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 alignSelf: "center",
-                height: "100vh",
+                height: {xs:"50vh", md:"100vh"},
+                pt: {xs:12, md:0},
               }}
               >
               <Typography
@@ -76,7 +77,7 @@ const DiscoverWorld = () => {
                 component={"body"}
                 variant="subtitle1"
                 className="font-notoSans color-gray"
-                sx={{px: {md:20, sx:5}, pb: 3, textAlign: "center", lineHeight: 1}}
+                sx={{px: 5, pb: 3, textAlign: "center", lineHeight: 1}}
               >
                 {Strings.immerseYourself}
               </Typography>

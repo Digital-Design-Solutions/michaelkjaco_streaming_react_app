@@ -16,8 +16,8 @@ export const About = () => {
     <>
       <div style={{}} className="about-content">
         <Grid container>
-          <Grid item xs={12} md={5}>
-            <Box sx={{ marginLeft: "6%" }}>
+          <Grid item xs={12} sm={12} md={6}>
+            <Box sx={{ marginLeft: "16%" }}>
               <div
                 style={{
                   display: "flex",
@@ -29,7 +29,7 @@ export const About = () => {
                   component={"h1"}
                   variant="h4"
                   fontSize={"42px"}
-                  sx={{ pt: 30 }}
+                  sx={{ pt: 10 }}
                   className="font-gloucester"
                 >
                   {Strings.aboutIntuitiveWarriorChannel}
@@ -60,23 +60,35 @@ export const About = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={7} sx={{ marginTop: "-50px" }}>
-            <img
+          <Grid item xs={12} sm={12} md={6} sx={{ marginTop: {xs:0, md:"-100px"}}}>
+            <Box sx={{
+                height: "100vh",
+                backgroundImage: `url( ${LocalImages.michaelJaco} )`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "right -150px bottom 100%",
+                minHeight: {xs: "600px", md: "900px"},               
+            }}>
+            {/* <img
               src={LocalImages.michaelJaco}
               style={{
                 // width: "120%",
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
+                width: "80%",
+                // objectFit: "cover",
                 // position: "absolute",
-                top: 0,
-                left: 0,
+                // overflowY: "overlay",
+                // position: "relative", // none
+                top: 30, //0
+                // left: 100, //0
+                right: "-30%",
+                boxSizing: "border-box",
                 // alignContent: "end",
-                overflow: "hidden",
-                transform: "translateX(0%)",
+                overflowX: "hidden",
+              
               }}
               alt=""
-            />
+            /> */}
+            </Box>
           </Grid>
         </Grid>
       </div>

@@ -84,6 +84,7 @@ function Dashboard() {
               justifyContent: "center",
               alignItems: "center",
               pb: 5,
+              pt: {xs: 2, md:0}
             }}
           >
             <Typography
@@ -107,8 +108,8 @@ function Dashboard() {
             <Box
               sx={{
                 //  boxSizing: "border-box"
-                ml: "-10%",
-                mr: "-10%",
+                ml: {md:0, xl:"-10%"},
+                mr: {md:0, xl:"-10%"},
               }}
             >
               {showSwiper && (
@@ -162,7 +163,7 @@ function Dashboard() {
           </Container>
         </Box>
       </Box>
-      <Box sx={{ marginTop: "-15%" }}>
+      <Box className='about-content-top'>
         <About />
       </Box>
       <Container sx={{ mt: "-12%", mb: "4%" }}>
