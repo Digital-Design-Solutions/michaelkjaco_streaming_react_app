@@ -56,25 +56,25 @@ function Dashboard() {
       <Box display="flex" height="100vh">
         <Box
           sx={{
-            // width: "120vw",
-            // marginLeft: "-10%",
-            // marginTop: "-13%",
-            // height: "100vh",
-            // backgroundColor: "#fff",
-            // borderTopLeftRadius: "50%",
-            // borderTopRightRadius: "50%",
-            // padding: "5% 0px 0px 0px",
-            // position: "absolute",
-            // flex: 1,
-
-            width: "100%",
+            width: "120vw",
+            marginLeft: "-10%",
+            marginTop: "-13%",
+            height: "100vh",
             backgroundColor: "#fff",
             borderTopLeftRadius: "50%",
             borderTopRightRadius: "50%",
-            position: "relative",
-            marginTop: "-10%",
-            padding: "5% 0",
+            padding: "5% 0px 0px 0px",
+            position: "absolute",
             flex: 1,
+
+            // width: "100%",
+            // backgroundColor: "#fff",
+            // borderTopLeftRadius: "50%",
+            // borderTopRightRadius: "50%",
+            // position: "relative",
+            // marginTop: "-10%",
+            // padding: "5% 0",
+            // flex: 1,
           }}
         >
           <Box
