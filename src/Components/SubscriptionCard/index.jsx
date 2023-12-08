@@ -16,6 +16,8 @@ export const SubscriptionCard = ({ header, body, footer, headerColor }) => {
         boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
         backgroundColor: "#fff",
         width: "100%",
+        boxSizing: "border-box",
+        margin: "0 20px 0 0px"
       }}
     >
       <div

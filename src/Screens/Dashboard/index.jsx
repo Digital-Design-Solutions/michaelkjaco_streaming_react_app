@@ -21,7 +21,8 @@ import { SubscriptionCard } from "../../Components/SubscriptionCard";
 import { SideSocialLinks } from "../../Components/SideSocialLinks";
 import DiscoverWorld from "./DiscoverWorld";
 
-const listData = ["", LocalImages.slider1, ""];
+// const listData = ["", LocalImages.slider1, ""];
+const listData = [LocalImages.slider1, LocalImages.slider1, LocalImages.slider1];
 
 const subscriptionData = [
   "Access to IWC Social Platform",
@@ -56,25 +57,25 @@ function Dashboard() {
       <Box display="flex" height="100vh">
         <Box
           sx={{
-            width: "120vw",
-            marginLeft: "-10%",
-            marginTop: "-13%",
-            height: "100vh",
-            backgroundColor: "#fff",
-            borderTopLeftRadius: "50%",
-            borderTopRightRadius: "50%",
-            padding: "5% 0px 0px 0px",
-            position: "absolute",
-            flex: 1,
-
-            // width: "100%",
+            // width: "120vw",
+            // marginLeft: "-10%",
+            // marginTop: "-13%",
+            // height: "100vh",
             // backgroundColor: "#fff",
             // borderTopLeftRadius: "50%",
             // borderTopRightRadius: "50%",
-            // position: "relative",
-            // marginTop: "-10%",
-            // padding: "5% 0",
+            // padding: "5% 0px 0px 0px",
+            // position: "absolute",
             // flex: 1,
+
+            width: "100%",
+            backgroundColor: "#fff",
+            borderTopLeftRadius: "50%",
+            borderTopRightRadius: "50%",
+            position: "relative",
+            marginTop: "-10%",
+            padding: "5% 0",
+            flex: 1,
           }}
         >
           <Box
@@ -105,7 +106,7 @@ function Dashboard() {
           </Box>
 
           <Container>
-            <Box
+            <Box className="swiper-01"
               sx={{
                 //  boxSizing: "border-box"
                 ml: {md:0, xl:"-10%"},
@@ -134,19 +135,21 @@ function Dashboard() {
                   autoplay
                   loop
                   style={{
-                    width: "90%",
+                    width: "80%",
                     overflow: "hidden",
+                    justifyContent: "center",
+                    padding: "0 10%"
                   }}
                 >
                   {listData.map((item) => (
-                    <SwiperSlide style={{ width: 600, height: 300 }}>
+                    <SwiperSlide style={{ backgroundColor: "#333" }}>
                       <VideoCard
                         description={
                           "Start saving your time with Framer Wireframe Web UI Kit."
                         }
                         title={"Admin Panel"}
                         timeStamp={"01:34:45"}
-                        imageUrl={item}
+                        imageUrl={item}                       
                       />
                     </SwiperSlide>
                   ))}
@@ -194,11 +197,12 @@ function Dashboard() {
           <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
         </Box>
         <Container sx={{ height: "55vh" }}>
-          <Box sx={{ boxSizing: "border-box" }}>
+          <Box sx={{ boxSizing: "border-box" }} className="swiper-02">
             {showSwiper && (
               <Swiper
                 navigation={true}
-                modules={[Navigation, EffectCoverflow]}
+                // modules={[Navigation, EffectCoverflow]}
+                modules={[Navigation, EffectCoverflow, Pagination]}
                 initialSlide={2}
                 className="mySwiper"
                 effect={"coverflow"}
@@ -211,6 +215,7 @@ function Dashboard() {
                   modifier: 1,
                   slideShadows: true,
                 }}
+                pagination={true}
                 spaceBetween={0}
                 slidesPerView={2}
                 autoplay
