@@ -159,6 +159,31 @@ h3 {
   height: 600px;
 }
 
+.swiper-01 .swiper-pagination {
+  margin-top: 20px!important;
+  position: relative!important;
+  top: -40px;
+}
+.swiper-01 .swiper-button-prev, .swiper-02 .swiper-button-prev {
+  background-image: url(./Assets/Images/play_button_right.png);
+  background-size: contain;
+  z-index:99999;
+  rotate: 180deg;
+  width: 40px;
+  height: 40px;
+}
+.swiper-01 .swiper-button-next, .swiper-02 .swiper-button-next {
+  background-image: url(./Assets/Images/play_button_right.png);
+  background-size: contain;
+  z-index:99999;
+  width: 40px;
+  height: 40px;
+}
+.swiper-01 .swiper-button-prev::after, .swiper-01 .swiper-button-next::after,
+.swiper-02 .swiper-button-prev::after, .swiper-02 .swiper-button-next::after {
+  content: "";
+}
+
 
 /* Discover a World of Content */
 .discover-world-main {

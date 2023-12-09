@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Typography, Box } from "@mui/material";
 
 import { LocalImages } from "../Utils/images";
+import { Strings } from "../Utils/strings";
 
 const listData = [
   {
@@ -39,17 +40,16 @@ const PartnerProducts = () => {
         className="font-gloucester"
         sx={{ p: 0, m: 0 }}
         fontSize={'50px'}
-      >
-        Shop MJ❜s Partners and Save
+      >        
+        {Strings.shopMjPartnersAndSave}
       </Typography>
       <Typography
         variant="subtitle1"
         className="color-gray"
         fontSize={'16px'}
-        sx={{ p: 0, m: 0, pb: 2, lineHeight: 1, fontWeight: "normal" }}
-      >
-        Home is behind, the world ahead and there are many paths <br />
-        to tread through shadows to the e"dge.
+        sx={{ m: 0, padding: {sm:"0 20%", md:"0 35%"}, pb: 2, lineHeight: 1, fontWeight: "normal" }}
+      >       
+        {Strings.homeIsBehind}
       </Typography>
       <Box>
         <img src={LocalImages.leaveWings} alt="" width={'120px'} />
