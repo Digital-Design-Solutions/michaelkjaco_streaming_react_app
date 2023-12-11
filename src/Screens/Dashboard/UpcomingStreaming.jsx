@@ -4,6 +4,9 @@ import { LocalImages } from "../../Utils/images";
 import MarkunreadIcon from "@mui/icons-material/Markunread";
 import SmsOutlinedIcon from "@mui/icons-material/SmsOutlined";
 import QueuePlayNextOutlinedIcon from "@mui/icons-material/QueuePlayNextOutlined";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
@@ -148,11 +151,11 @@ const UpcomingStreaming = () => {
                   </SwiperSlide>
                 </Swiper>
               </div>
-              {/* <SliderNav
+              <SliderNav
                 onBackClick={onBackClick}
                 onForwardClick={onForwardClick}
                 currentActiveIndex={activeSlide}
-              /> */}
+              />
             </Grid>
           )}
         </Grid>
@@ -162,7 +165,7 @@ const UpcomingStreaming = () => {
 };
 
 export default UpcomingStreaming;
-const SliderNav = (onBackClick, onForwardClick, currentActiveIndex) => {
+const SliderNav = ({onBackClick, onForwardClick, currentActiveIndex}) => {
   return (
     <div
       style={{
@@ -173,40 +176,50 @@ const SliderNav = (onBackClick, onForwardClick, currentActiveIndex) => {
         marginTop: "10%",
       }}
     >
-      <button onClick={onBackClick} fill="default">
-        <img
+      <button onClick={onBackClick} 
+      // fill="default"
+      style={{background: "none", border: 0, margin: "10% 30%"}}
+      >
+      <PlayArrowIcon style={{fontSize: "30px", transform: "rotate(-90deg)", padding: 0, borderRadius: 5, margin: 0, color: "#000", background: "#fff"}}/>
+      {/* <svg data-testid="ArrowDropDownIcon" color="#000" fill="#000" ></svg> */}
+        {/* <img
           src={LocalImages.playBtnTop}
           style={{
             width: "25px",
             height: "25px",
             filter: "brightness(255) invert(1)",
+            background: "#fff"
           }}
-        />
+        /> */}
       </button>
       <div
         style={{
-          padding: "16px 0px",
+          padding: "30px 10px",
           display: "flex",
           flexDirection: "column",
         }}
       >
         {new Array(3).fill(0).map((item, index) => (
           <SliderDots
-            color={currentActiveIndex === index ? "#000" : "rgba(0,0,0,0.4)"}
+            // color={currentActiveIndex === index ? "#000" : "rgba(0,0,0,0.4)"}
+            color={currentActiveIndex === index ? "red" : "white"}
             uniqueKey={index}
           />
         ))}
       </div>
-      <Box onClick={onForwardClick} fill="default">
-        <img
+      {/* <Box onClick={onForwardClick} fill="default"> */}
+      <Box onClick={onForwardClick} style={{background: "none", border: 0, margin: "10% 20%"}}>
+      <PlayArrowIcon style={{fontSize: "30px", transform: "rotate(90deg)", borderRadius: 5, padding: 0, margin: 0, color: "#000", background: "#fff"}}/>
+        {/* <img
           src={LocalImages.playBtnTop}
           style={{
             width: "25px",
             height: "25px",
             filter: "brightness(255) invert(1)",
             transform: "rotate(180deg)",
+            background: "#fff"
           }}
-        />
+        /> */}
       </Box>
     </div>
   );

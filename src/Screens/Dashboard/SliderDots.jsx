@@ -1,14 +1,15 @@
+import { Box } from "@mui/material";
 import React from "react";
 
-export const SliderDots = (uniqueKey, color) => {
+export const SliderDots = ({uniqueKey, color}) => {
   return (
-    <div
-      style={{
-        backgroundColor: color,
+    <Box
+      sx={{
+        background: color,
         height: "12px",
         width: "12px",
         borderRadius: "50px",
-        margin: "40px 4px",
+        margin: "5px 4px",
       }}
     />
   );
