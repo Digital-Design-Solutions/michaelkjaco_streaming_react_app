@@ -284,7 +284,9 @@ h3 {
   justify-content: flex-end;
   overflow: hidden;
 }
-
+.scheduleCardContent .swiper-button-prev::after, .scheduleCardContent .swiper-button-next::after {
+  content: " ";
+}
 
 /* Media Queries */
 @media screen and (max-width: 995px) {
@@ -295,6 +297,7 @@ h3 {
   .faq-content {
     padding: 5% 10%;
   }
+  .swiper-01 .swiper-slide-active, .swiper-02 .swiper-slide-active { width: 500px!important;}
 
 }
 
@@ -316,7 +319,11 @@ h3 {
     margin-top: -250px;
     bottom: -200px;
   }
+  .swiper-01 .swiper-slide-active,.swiper-02 .swiper-slide-active { width: 500px!important;}
 }
+
+
+
 
 .side-social-link-container {
   position: fixed;
