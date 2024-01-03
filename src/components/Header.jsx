@@ -92,7 +92,7 @@ function Header() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Box sx={{ display: "flex" }}>
-            <Stack spacing={2} direction="row">
+              <Stack spacing={2} direction="row">
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorElNav}
@@ -125,22 +125,29 @@ function Header() {
                 </Menu>
                 <IconButton
                   size="medium"
-                  sx={{ display: { xs: 'none', md: 'flex' } }}       
-                className='header-menu-icon' >
+                  sx={{ display: { xs: "none", md: "flex" } }}
+                  className="header-menu-icon"
+                >
                   <SearchOutlinedIcon />
                 </IconButton>
                 <IconButton
+                  onClick={toggleLogin}
                   size="medium"
-                  className='header-menu-icon'>
+                  className="header-menu-icon"
+                >
                   <PersonIcon />
                 </IconButton>
                 <Button
                   onClick={toggleLogin}
                   variant="contained"
-                  sx={{display: {xs: "none", md:"flex"}, background: "#FFA903", color: "#fff"}}
+                  sx={{
+                    display: { xs: "none", md: "flex" },
+                    background: "#FFA903",
+                    color: "#fff",
+                  }}
                   className="header-signup"
                 >
-                  <span >SIGN UP NOW</span>
+                  <span>SIGN UP NOW</span>
                 </Button>
               </Stack>
               <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -151,13 +158,12 @@ function Header() {
                   aria-haspopup="true"
                   onClick={handleOpenNavMenu}
                   color="inherit"
-                  sx={{background: "#FFA903", marginLeft: 1}}
+                  sx={{ background: "#FFA903", marginLeft: 1 }}
                   className="icon-style01"
                 >
                   <MenuIcon className="icon-style01" />
                 </IconButton>
               </Box>
-
             </Box>
           </Box>
         </Toolbar>

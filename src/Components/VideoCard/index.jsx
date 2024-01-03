@@ -1,7 +1,9 @@
-import React from "react";
-import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
+import React, { useContext } from "react";
+import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
+import { AuthContext } from "../../Context/AuthContext";
 
 export const VideoCard = ({ timeStamp, title, description, imageUrl }) => {
+  const { userInfo } = useContext(AuthContext);
   return (
     <div
     // style={{ width: "400px" }}
@@ -48,7 +50,8 @@ export const VideoCard = ({ timeStamp, title, description, imageUrl }) => {
               margin: "0px",
             }}
           >
-            {title}
+            {/* {title} */}
+            {userInfo?.user_nicename}
           </h4>
           <span
             style={{
