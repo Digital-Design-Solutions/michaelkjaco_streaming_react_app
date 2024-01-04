@@ -17,7 +17,7 @@ export const About = () => {
       <div style={{}} className="about-content">
         <Grid container>
           <Grid item xs={12} sm={12} md={6}>
-            <Box sx={{ marginLeft: "16%" }}>
+            <Box sx={{ marginLeft: {xs:"6%", md:"16%"} }}>
               <div
                 style={{
                   display: "flex",
