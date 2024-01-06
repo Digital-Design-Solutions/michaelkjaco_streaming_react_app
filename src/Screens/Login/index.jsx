@@ -3,14 +3,14 @@ import {
   Box,
   Card,
   CardContent,
-  CardHeader,
-  Container,
+  CircularProgress,
+  Dialog,
   Grid,
   Typography,
 } from "@mui/material";
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -19,6 +19,8 @@ import CustomInput from "../../Components/Form/CustomInput";
 import { isValidString } from "../../Utils/validators";
 import { LocalImages } from "../../Utils/images";
 import { AuthContext } from "../../Context/AuthContext";
+import { loginUser } from "../../Features/Services/Login";
+import { useState } from "react";
 
 const initialValues = {
   email: "",
@@ -31,24 +33,49 @@ const signinSchema = Yup.object().shape({
 });
 
 const Login = () => {
+  const { updateUserInfo } = useContext(AuthContext);
 
-  const { toggleLogin } = useContext(AuthContext);
+  const [isLoading, setLoading] = useState(false);
 
+  const handleClose = () => {
+    setLoading(false);
+  };
+
+  const handleOpen = () => {
+    setLoading(true);
+  };
 
   const loginForm = useFormik({
     initialValues,
     validationSchema: signinSchema,
     onSubmit: () => {},
     validateOnMount: true,
+    enableReinitialize: true,
   });
 
   const doLogin = async (event) => {
     event.preventDefault();
-    toggleLogin();
-    loginForm.submitForm(()=>{
-      if(loginForm.isValid){
-      }
-    })
+    handleOpen();
+    loginForm
+      .submitForm()
+      .then(() => {
+        if (loginForm.isValid) {
+          loginUser(
+            loginForm.values,
+            (response) => {
+              handleClose();
+              updateUserInfo(response.data);
+            },
+            (error) => {
+              alert(error);
+              handleClose();
+            }
+          );
+        }
+      })
+      .catch(() => {
+        alert("Please fill the credentials and proceed");
+      });
   };
 
   const formContent = () => (
@@ -71,7 +98,7 @@ const Login = () => {
             style={{ width: "60%", height: "auto" }}
           />
         }
-        style={{background: "red"}}
+        style={{ background: "red" }}
       />
 
       <CustomInput
@@ -111,17 +138,30 @@ const Login = () => {
         </Grid>
         
       </Grid> */}
-     
-      <Grid container >
-          <Grid item xs={6} className="login-content-style01">
-             {/* <Typography><CheckBox /> <span style={{position: "relative", top: -10, left: -2}}>Keep me signed in</span></Typography> */}
-             <FormGroup><FormControlLabel control={<Checkbox />} label="Keep me signed in" /></FormGroup>
-          </Grid>
-          <Grid item xs={6} sx={{ textAlign: "right", paddingTop: 1, fontSize: 11}}>
-          <Typography variant="body1" component={"body"} className="login-forgot-pass">
+
+      <Grid container>
+        <Grid item xs={6} className="login-content-style01">
+          {/* <Typography><CheckBox /> <span style={{position: "relative", top: -10, left: -2}}>Keep me signed in</span></Typography> */}
+          <FormGroup>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Keep me signed in"
+            />
+          </FormGroup>
+        </Grid>
+        <Grid
+          item
+          xs={6}
+          sx={{ textAlign: "right", paddingTop: 1, fontSize: 11 }}
+        >
+          <Typography
+            variant="body1"
+            component={"body"}
+            className="login-forgot-pass"
+          >
             Forgot Password?
           </Typography>
-          </Grid>
+        </Grid>
       </Grid>
       <button
         type="submit"
@@ -163,17 +203,14 @@ const Login = () => {
         />
       </Grid>
 
-      <button
-        type="submit"
-        className="login-btn-submit login-btn-create-ac"
-      >
+      <button type="submit" className="login-btn-submit login-btn-create-ac">
         Create account
       </button>
     </form>
   );
 
   return (
-    <Box maxWidth={true} style={{ height: "100vh", /*overflow: "hidden"*/ }}>
+    <Box maxWidth={true} style={{ height: "100vh" /*overflow: "hidden"*/ }}>
       <Card
         style={{
           padding: "4vh",
@@ -198,12 +235,13 @@ const Login = () => {
         }}
         container
       >
-        <Grid xs="10" sm="6" md="10" lg="4" xl="4" sx={{mt:15}}>
+        <Grid xs="10" sm="6" md="10" lg="4" xl="4" sx={{ mt: 15 }}>
           <Card className="login-card">
             <Typography
               variant="h3"
               component={"h3"}
-              className="font-gloucester title-style01">
+              className="font-gloucester title-style01"
+            >
               Sign In to Your Account
             </Typography>
             <CardContent
@@ -229,23 +267,35 @@ const Login = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>  
+        </Grid>
 
-        <Box style={{
-          height: "100px",
-          width:"100%",
-          backgroundImage: `url( ${LocalImages.loginBottomBg} )`,
-          backgroundSize: "cover",
-          backgroundPosition: "cetner bottom",
-          position: "relative",
-          top: -80,
-        }}>
-        <p></p>
-      </Box>        
+        <Box
+          style={{
+            height: "100px",
+            width: "100%",
+            backgroundImage: `url( ${LocalImages.loginBottomBg} )`,
+            backgroundSize: "cover",
+            backgroundPosition: "cetner bottom",
+            position: "relative",
+            top: -80,
+          }}
+        >
+          <p></p>
+        </Box>
       </Grid>
-      
-      
 
+      <Dialog
+        open={isLoading}
+        onClose={handleClose}
+        PaperProps={{
+          style: {
+            backgroundColor: "transparent",
+            boxShadow: "none",
+          },
+        }}
+      >
+        <CircularProgress />
+      </Dialog>
     </Box>
   );
 };
