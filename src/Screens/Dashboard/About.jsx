@@ -17,7 +17,7 @@ export const About = () => {
       <div style={{}} className="about-content">
         <Grid container>
           <Grid item xs={12} sm={12} md={6}>
-            <Box sx={{ marginLeft: {xs:"6%", md:"16%"} }}>
+            <Box>
               <div
                 style={{
                   display: "flex",
@@ -34,9 +34,9 @@ export const About = () => {
                 >
                   {Strings.aboutIntuitiveWarriorChannel}
                 </Typography>
-                <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
+                <img src={LocalImages.leaveWings} style={{ width: "120px" }} alt="" />
               </div>
-              <Box sx={{ mr: 8 }}>
+              <Box sx={{ mr: 8, marginLeft: {xs:"6%", md:"16%"} }}>
                 <Typography
                   component={"body"}
                   variant="body1"
