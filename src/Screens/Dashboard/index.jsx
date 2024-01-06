@@ -53,8 +53,7 @@ function Dashboard() {
     <>
       <Header />
       <Box sx={{ width: "100%" }} className="header-bg" />
-      {/* <Box display="flex" height="100vh" width={"100vw"}> */}
-      <Box display="flex" height="100vh">
+        <Box display="flex" sx={{height: {xs:"90vh", md: "100vh"},}}>
         <Box
           sx={{
             // width: "120vw",
@@ -68,14 +67,25 @@ function Dashboard() {
             // position: "absolute",
             // flex: 1,
 
-            width: "100%",
+            // width: "100%",
+            // backgroundColor: "#fff",
+            // borderTopLeftRadius: "50%",
+            // borderTopRightRadius: "50%",
+            // position: "relative",
+            // marginTop: "-10%",
+            // padding: "5% 0",
+            // flex: 1,
+            
+            width: {xs:"70%", md:"90%"},
             backgroundColor: "#fff",
-            borderTopLeftRadius: "50%",
-            borderTopRightRadius: "50%",
+            // borderTopLeftRadius: "50%",
+            // borderTopRightRadius: "50%",
+            borderRadius: {xs:"500% / 100% 100% 0 0", md: "120% / 100% 100% 0 0"},
             position: "relative",
-            marginTop: "-10%",
-            padding: "5% 0",
+            marginTop: {xs:"-13%", md:"-10%"},
+            padding: {xs: "5% 15%", md: "5%"},
             flex: 1,
+            textAlign: "center",
           }}
         >
           <Box
@@ -85,7 +95,7 @@ function Dashboard() {
               justifyContent: "center",
               alignItems: "center",
               pb: 5,
-              pt: {xs: 2, md:0}
+              pt: {xs: 2, md:0},
             }}
           >
             <Typography
@@ -102,15 +112,15 @@ function Dashboard() {
             >
               {Strings.startSavingYourTimerWithFramerWireframeWebuiKit}
             </Typography>
-            <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
+            <img src={LocalImages.leaveWings} style={{ width: "120px" }} alt="" />
           </Box>
 
           <Container>
             <Box className="swiper-01"
               sx={{
                 //  boxSizing: "border-box"
-                ml: {md:0, xl:"-10%"},
-                mr: {md:0, xl:"-10%"},
+                ml: {xs:"-15%", md:0, xl:"-10%"},
+                mr: {xs:"-5%", md:0, xl:"-10%"},
               }}
             >
               {showSwiper && (
@@ -169,7 +179,7 @@ function Dashboard() {
       <Box className='about-content-top'>
         <About />
       </Box>
-      <Container sx={{ mt: "-12%", mb: "4%" }}>
+      <Container sx={{ mt: -20, mb: "4%" }}>
         <Box
           sx={{
             display: "flex",
