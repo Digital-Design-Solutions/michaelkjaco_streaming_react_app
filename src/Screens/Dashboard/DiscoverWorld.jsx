@@ -16,7 +16,10 @@ const ImageFrame = ({ imageUrl, width, height, marginLeft }) => {
 
 const DiscoverWorld = () => {
   return (
-    <div className='discover-world-main'>
+    <Box className='discover-world-main' sx={{
+      marginTop:{md: "10%"},
+      paddingTop: {md: "50px"}
+    }}>
       <div className='discover-world'>
         <Grid container sx={{width: "100%", flexDirection: {xs:"column-reverse", md:"row"}}}>
             <Grid xs={12} md={6} xl={6} sx={{py: {sm:0, md:10}}} className='discover-world-left'>
@@ -86,7 +89,7 @@ const DiscoverWorld = () => {
             </Grid>
         </Grid>
       </div>
-    </div>
+    </Box>
   )
 }
 

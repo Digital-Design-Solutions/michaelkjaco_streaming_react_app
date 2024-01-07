@@ -22,7 +22,7 @@ import { SideSocialLinks } from "../../Components/SideSocialLinks";
 import DiscoverWorld from "./DiscoverWorld";
 
 // const listData = ["", LocalImages.slider1, ""];
-const listData = [LocalImages.slider1, LocalImages.slider1, LocalImages.slider1];
+const listData = [LocalImages.slider1, LocalImages.liveTv, LocalImages.slider1, LocalImages.liveTv, LocalImages.slider1];
 
 const subscriptionData = [
   "Access to IWC Social Platform",
@@ -53,8 +53,7 @@ function Dashboard() {
     <>
       <Header />
       <Box sx={{ width: "100%" }} className="header-bg" />
-      {/* <Box display="flex" height="100vh" width={"100vw"}> */}
-      <Box display="flex" height="100vh">
+        <Box display="flex" sx={{height: {xs:"90vh", md: "100vh"},}}>
         <Box
           sx={{
             // width: "120vw",
@@ -68,14 +67,25 @@ function Dashboard() {
             // position: "absolute",
             // flex: 1,
 
-            width: "100%",
+            // width: "100%",
+            // backgroundColor: "#fff",
+            // borderTopLeftRadius: "50%",
+            // borderTopRightRadius: "50%",
+            // position: "relative",
+            // marginTop: "-10%",
+            // padding: "5% 0",
+            // flex: 1,
+            
+            width: {xs:"70%", md:"90%"},
             backgroundColor: "#fff",
-            borderTopLeftRadius: "50%",
-            borderTopRightRadius: "50%",
+            // borderTopLeftRadius: "50%",
+            // borderTopRightRadius: "50%",
+            borderRadius: {xs:"450% / 100% 100% 0 0", md: "120% / 100% 100% 0 0"},
             position: "relative",
-            marginTop: "-10%",
-            padding: "5% 0",
+            marginTop: {xs:"-13%", md:"-10%"},
+            padding: {xs: "5% 15%", md: "5%"},
             flex: 1,
+            textAlign: "center",
           }}
         >
           <Box
@@ -85,7 +95,7 @@ function Dashboard() {
               justifyContent: "center",
               alignItems: "center",
               pb: 5,
-              pt: {xs: 2, md:0}
+              pt: {xs: 2, md:0},
             }}
           >
             <Typography
@@ -102,15 +112,15 @@ function Dashboard() {
             >
               {Strings.startSavingYourTimerWithFramerWireframeWebuiKit}
             </Typography>
-            <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
+            <img src={LocalImages.leaveWings} style={{ width: "120px" }} alt="" />
           </Box>
 
           <Container>
             <Box className="swiper-01"
               sx={{
                 //  boxSizing: "border-box"
-                ml: {md:0, xl:"-10%"},
-                mr: {md:0, xl:"-10%"},
+                ml: {xs:"-15%", md:0, xl:"-10%"},
+                mr: {xs:"-5%", md:0, xl:"-10%"},
               }}
             >
               {showSwiper && (
@@ -131,7 +141,17 @@ function Dashboard() {
                   }}
                   pagination={true}
                   spaceBetween={2}
-                  slidesPerView={2}
+                  // slidesPerView={1}
+                  breakpoints={{
+                    // when window width is >= 640px
+                    800: {
+                      slidesPerView: 2,
+                    },
+                    // when window width is <= 639px
+                    799: {
+                      slidesPerView: 1,
+                    }
+                  }}
                   autoplay
                   loop
                   style={{
@@ -169,7 +189,7 @@ function Dashboard() {
       <Box className='about-content-top'>
         <About />
       </Box>
-      <Container sx={{ mt: "-12%", mb: "4%" }}>
+      <Container sx={{ mt: -20, mb: "4%" }}>
         <Box
           sx={{
             display: "flex",
@@ -196,7 +216,7 @@ function Dashboard() {
           </Typography>
           <img src={LocalImages.leaveWings} style={{ width: "120px" }} />
         </Box>
-        <Container sx={{ height: "55vh" }}>
+        {/* <Container sx={{ height: "55vh" }}>
           <Box sx={{ boxSizing: "border-box" }} className="swiper-02">
             {showSwiper && (
               <Swiper
@@ -217,7 +237,7 @@ function Dashboard() {
                 }}
                 pagination={true}
                 spaceBetween={0}
-                slidesPerView={2}
+                slidesPerView={1}
                 autoplay
                 loop
                 style={{
@@ -254,6 +274,90 @@ function Dashboard() {
               </Swiper>
             )}
           </Box>
+        </Container> */}
+        <Container>
+        <Box className="swiper-02"
+        sx={{
+          //  boxSizing: "border-box"
+          ml: {xs:"-10%", md:0, xl:"-10%"},
+          mr: {xs:"-5%", md:0, xl:"-10%"},
+        }}
+        >
+        {showSwiper && (
+          <Swiper
+            navigation={true}
+            modules={[Navigation, EffectCoverflow, Pagination]}
+            initialSlide={1}
+            className="mySwiper"
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 100,
+              depth: 600,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={true}
+            spaceBetween={2}
+            // slidesPerView={1}
+            breakpoints={{
+              // when window width is >= 640px
+              800: {
+                slidesPerView: 2,
+              },
+              // when window width is <= 639px
+              799: {
+                slidesPerView: 1,
+              }
+            }}
+            autoplay
+            loop
+            style={{
+              width: "80%",
+              overflow: "hidden",
+              justifyContent: "center",
+              padding: "0 10%"
+            }}
+          >
+            <SwiperSlide style={{ width: 500, height: 550 }}>
+            <SubscriptionCard
+              header={"IWC Silver Membership"}
+              body={subscriptionData}
+              footer={"$145.00 Per Video"}
+              headerColor="#00000029"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide style={{ width: 500, height: 550 }}>
+            <SubscriptionCard
+              header={"IWC Pay-Per-Video"}
+              body={subscriptionData1}
+              footer={"$5.00 Per Video"}
+              headerColor=""
+            />
+          </SwiperSlide>
+
+          <SwiperSlide style={{ width: 500, height: 550 }}>
+            <SubscriptionCard
+              header={"IWC Gold Membership"}
+              body={subscriptionData}
+              footer={"$287.50 Per Video"}
+              headerColor="rgba(255,215,0, 0.5)"
+            />
+          </SwiperSlide>
+          <SwiperSlide style={{ width: 500, height: 550 }}>
+            <SubscriptionCard
+              header={"IWC Pay-Per-Video"}
+              body={subscriptionData1}
+              footer={"$5.00 Per Video"}
+              headerColor=""
+            />
+          </SwiperSlide>
+          </Swiper>
+        )}
+        </Box>
         </Container>
       </Container>
       <DiscoverWorld />

@@ -66,7 +66,7 @@ const UpcomingStreaming = () => {
             // paddingLeft: "80px",
           }}
         >
-          <Box sx={{p:0, pt: 30}}>
+          <Box sx={{p:0, pt: 30, m:0,  marginLeft: {xs:"6%", md:"16%"}}}>
             <Typography
               component={"h3"}
               variant="h3"
