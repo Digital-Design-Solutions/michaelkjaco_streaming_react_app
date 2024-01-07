@@ -5,8 +5,8 @@ export const UnAuthenticated = () => {
   return (
     <Routes>
       <Route path="/">
-        <Route path="/" element={<Login />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Route>
     </Routes>
   );

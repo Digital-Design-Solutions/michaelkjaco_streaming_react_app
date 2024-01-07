@@ -17,7 +17,7 @@ import AppRoutes from "./Navigations";
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="iwc-tv">
         <AppRoutes />
       </BrowserRouter>
     </AuthProvider>
